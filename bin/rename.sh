@@ -11,12 +11,38 @@ NAMESPACE_RULES=$BASEDIR/rules/namespace.rules
 
 if [[ $# -ge 1 ]]; then
     SERVER=$1
+    echo "Custom server: $SERVER"
+    if [[ $# -ge 2 ]]; then
+        RULES=$2
+        echo "Custom server: $SERVER"
+    else
+        # Dynamicly find the server version
+        RULES=$BASEDIR/rules/`unzip -p $SERVER net/minecraft/server/MinecraftServer.class | strings | grep 'server version' | sed -e 's/^[^0-9]*//' -e 's/_.*//'`.rules
+        echo "Extracted rules: $RULES"
+    fi
+else
+    echo "Default server: $SERVER"
+    echo "Default rules: $RULES"
+fi
+
+if [[ ! -e $SERVER ]]; then
+    echo; echo "ERROR: Server: $SERVER doesn't exist";
+    exit 0;
+fi
+if [[ ! -e $RULES ]]; then
+    echo; echo "ERROR: Rules: $RULES doesn't exist";
+    exit 0;
 fi
 
 OUTPUT=$BASEDIR/minecraft_server.jar
 OUTPUT_TMP=$OUTPUT.tmp
 
-java -jar $JARJAR process $RULES $SERVER $OUTPUT_TMP
-java -jar $JARJAR process $NAMESPACE_RULES $OUTPUT_TMP $OUTPUT
+echo "Renaming classfiles according to $RULES"
+java -jar $JARJAR process $RULES $SERVER $OUTPUT_TMP > /dev/null 2>&1
+
+echo "Repackaging classfiles into net.minecraft.server"
+java -jar $JARJAR process $NAMESPACE_RULES $OUTPUT_TMP $OUTPUT > /dev/null 2>&1
 
 rm $OUTPUT_TMP
+
+echo "New modified minecraft_server.jar: $OUTPUT"
