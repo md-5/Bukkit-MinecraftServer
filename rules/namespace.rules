@@ -1,0 +1,3 @@
+rule do _do
+rule if _if
+rule * net.minecraft.server.@0
