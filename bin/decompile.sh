@@ -34,7 +34,7 @@ java -jar $JADRETRO $OUTPUT_TMP/*{,/*{,/*{,/*}}}/ > /dev/null 2>&1
 
 echo "Decompiling with jad"
 mkdir $OUTPUT_TMP2
-$JAD -dead -o -r -s .java -d $OUTPUT_TMP2 `find $OUTPUT_TMP -name '*.class' -print` > /dev/null 2>&1
+$JAD -ff -nonlb -dead -o -r -s .java -d $OUTPUT_TMP2 `find $OUTPUT_TMP -name '*.class' -print` > /dev/null 2>&1
 rm -rf $OUTPUT_TMP
 
 echo "Creating source zip"
