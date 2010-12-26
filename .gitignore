@@ -1,2 +1,4 @@
 /minecraft_server.jar
+/minecraft_server.src.zip
+*.tmp/
 .*.sw[a-p]
