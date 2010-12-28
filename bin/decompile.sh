@@ -48,6 +48,9 @@ rm -rf $OUTPUT_TMP
 echo "Applying patch to fix some decompilation issues"
 patch -d $OUTPUT_TMP2 -p1 < $PATCH
 
+echo "Removing comments and excessn newlines"
+perl -i -nlpe'BEGIN { $/ = undef }; s#^// .*\n##gm; s/\r//g; s/\n{2,}/\n\n/g; s/(^\n*|\n*$)//' $OUTPUT_TMP2/net/minecraft/server/*.java
+
 echo "Reformatting source";
 $JACOBE -cfg=$JACOBECFG -nobackup -overwrite -outext=java $OUTPUT_TMP2/net/minecraft/server/*.java >/dev/null 2>&1
 
