@@ -43,6 +43,7 @@ rule bo NBTTagInt
 rule b PathPoint
 rule bp EntityFireball
 rule bq Packet33RelEntityMoveLook
+rule br WorldGenHellLava
 rule bs ItemSword
 rule bt ItemBlock
 rule bu IChunkProvider
@@ -72,6 +73,7 @@ rule cq PathEntity
 rule cr Packet34EntityTeleport
 rule cs Packet22Collect
 rule ct BlockReed
+rule cu WorldGenLakes
 rule cv EntitySheep
 rule cw ItemSeeds
 rule cx ItemSnowball
@@ -95,6 +97,7 @@ rule do Packet51MapChunk
 rule d Packet20NamedEntitySpawn
 rule dp MaterialLiquid
 rule dq Packet50PreChunk
+rule dr WorldGenLightStone2
 rule ds NetworkListenThread
 rule dt ThreadLoginVerifier
 rule du BlockStone
@@ -124,9 +127,12 @@ rule eq World
 rule er IMobs
 rule es MobSpawnerSwamp
 rule et EntityPlayerMP
+rule eu WorldManager
 rule ev BlockWorkbench
 rule ew BlockGlass
+rule ex WorldServer
 rule ey ICommandListener
+rule ez WorldGenMinable
 rule fa BlockJukeBox
 rule fb BlockMushroom
 rule fc NetHandler
@@ -143,6 +149,7 @@ rule fm EntityBoat
 rule fn Packet53BlockChange
 rule fo EntityCreeper
 rule f Packet2Handshake
+rule fp WorldGenLightStone1
 rule fq NoiseGeneratorOctaves2
 rule fr NoiseGeneratorOctaves
 rule fs NetLoginHandler
@@ -190,6 +197,7 @@ rule hf EntityCreature
 rule hg NBTBase
 rule hh MathHelper
 rule hi EnumArt
+rule hj WorldGenReed
 rule hk InventoryPlayer
 rule hl ItemArmor
 rule hm BlockFlower
@@ -197,6 +205,7 @@ rule hn ItemStack
 rule ho ItemSpade
 rule hp EntityList
 rule hq Packet38
+rule hr WorldProviderHell
 rule hs ChunkPosition
 rule ht NibbleArray
 rule hu EntityPig
@@ -215,6 +224,8 @@ rule ig MCHashTable
 rule ih PlayerManager
 rule ii EntityChicken
 rule ij Packet52MultiBlockChange
+rule ik WorldGenPumpkin
+rule il WorldProvider
 rule im NBTTagString
 rule in BlockSponge
 rule io MobSpawnerBase
@@ -224,6 +235,7 @@ rule iq ThreadMonitorConnection
 rule ir NetworkReaderThread
 rule is NetworkWriterThread
 rule it Packet
+rule iu WorldGenLiquids
 rule iv IBlockAccess
 rule iw BlockLever
 rule ix WorldGenFire
@@ -239,6 +251,7 @@ rule jf ChunkProviderGenerate
 rule jg ItemHoe
 rule jh Packet59ComplexEntity
 rule ji NetServerHandler
+rule jj WorldGenTrees
 rule jk BlockBloodStone
 rule jl BlockDoor
 rule jm Path
