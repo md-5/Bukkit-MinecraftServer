@@ -1,0 +1,241 @@
+diff --git a/net/minecraft/server/GuiLogFormatter.java b/net/minecraft/server/GuiLogFormatter.java
+index 6a3ba8b..4294262 100644
+--- a/net/minecraft/server/GuiLogFormatter.java
++++ b/net/minecraft/server/GuiLogFormatter.java
+@@ -18,7 +18,7 @@ class GuiLogFormatter extends Formatter {
+ 
+     GuiLogFormatter(GuiLogOutputHandler guilogoutputhandler) {
+         a = guilogoutputhandler;
+-        super();
++        // super();
+     }
+ 
+     public String format(LogRecord logrecord) {
+diff --git a/net/minecraft/server/GuiStatsListener.java b/net/minecraft/server/GuiStatsListener.java
+index b77e57a..99615d3 100644
+--- a/net/minecraft/server/GuiStatsListener.java
++++ b/net/minecraft/server/GuiStatsListener.java
+@@ -18,7 +18,7 @@ class GuiStatsListener
+ 
+     GuiStatsListener(GuiStatsComponent guistatscomponent) {
+         a = guistatscomponent;
+-        super();
++        // super();
+     }
+ 
+     public void actionPerformed(ActionEvent actionevent) {
+diff --git a/net/minecraft/server/MinecartTrackLogic.java b/net/minecraft/server/MinecartTrackLogic.java
+index b76547a..7a4c0ac 100644
+--- a/net/minecraft/server/MinecartTrackLogic.java
++++ b/net/minecraft/server/MinecartTrackLogic.java
+@@ -23,7 +23,7 @@ class MinecartTrackLogic {
+ 
+     public MinecartTrackLogic(BlockMinecartTrack blockminecarttrack, World world, int i, int j, int k) {
+         a = blockminecarttrack;
+-        super();
++        // super();
+         g = new ArrayList();
+         b = world;
+         c = i;
+diff --git a/net/minecraft/server/NetworkAcceptThread.java b/net/minecraft/server/NetworkAcceptThread.java
+index b5e1be0..e596f0c 100644
+--- a/net/minecraft/server/NetworkAcceptThread.java
++++ b/net/minecraft/server/NetworkAcceptThread.java
+@@ -19,7 +19,7 @@ class NetworkAcceptThread extends Thread {
+     NetworkAcceptThread(NetworkListenThread networklistenthread, String s, MinecraftServer minecraftserver) {
+         b = networklistenthread;
+         a = minecraftserver;
+-        super(s);
++        // super(s);
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/NetworkMasterThread.java b/net/minecraft/server/NetworkMasterThread.java
+index 62a097d..ce899bb 100644
+--- a/net/minecraft/server/NetworkMasterThread.java
++++ b/net/minecraft/server/NetworkMasterThread.java
+@@ -15,7 +15,7 @@ class NetworkMasterThread extends Thread {
+ 
+     NetworkMasterThread(NetworkManager networkmanager) {
+         a = networkmanager;
+-        super();
++        // super();
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/NetworkReaderThread.java b/net/minecraft/server/NetworkReaderThread.java
+index d9f8dd3..e762404 100644
+--- a/net/minecraft/server/NetworkReaderThread.java
++++ b/net/minecraft/server/NetworkReaderThread.java
+@@ -14,24 +14,20 @@ class NetworkReaderThread extends Thread {
+     final NetworkManager a; /* synthetic field */
+ 
+     NetworkReaderThread(NetworkManager networkmanager, String s) {
+-        a = networkmanager;
+         super(s);
++        a = networkmanager;
+     }
+ 
+     public void run() {
+         synchronized(NetworkManager.a) {
+             NetworkManager.b++;
+         }
+-        for(; NetworkManager.a(a) && !NetworkManager.b(a); NetworkManager.c(a));
+-        synchronized(NetworkManager.a) {
+-            NetworkManager.b--;
+-        }
+-        break MISSING_BLOCK_LABEL_115;
+-        Exception exception2;
+-        exception2;
+-        synchronized(NetworkManager.a) {
+-            NetworkManager.b--;
++        try {
++            for(; NetworkManager.a(a) && !NetworkManager.b(a); NetworkManager.c(a));
++        } finally {
++            synchronized(NetworkManager.a) {
++                NetworkManager.b--;
++            }
+         }
+-        throw exception2;
+     }
+ }
+diff --git a/net/minecraft/server/NetworkWriterThread.java b/net/minecraft/server/NetworkWriterThread.java
+index a40276c..fda8d91 100644
+--- a/net/minecraft/server/NetworkWriterThread.java
++++ b/net/minecraft/server/NetworkWriterThread.java
+@@ -14,24 +14,20 @@ class NetworkWriterThread extends Thread {
+     final NetworkManager a; /* synthetic field */
+ 
+     NetworkWriterThread(NetworkManager networkmanager, String s) {
+-        a = networkmanager;
+         super(s);
++        a = networkmanager;
+     }
+ 
+     public void run() {
+         synchronized(NetworkManager.a) {
+             NetworkManager.c++;
+         }
+-        for(; NetworkManager.a(a); NetworkManager.d(a));
+-        synchronized(NetworkManager.a) {
+-            NetworkManager.c--;
+-        }
+-        break MISSING_BLOCK_LABEL_105;
+-        Exception exception2;
+-        exception2;
+-        synchronized(NetworkManager.a) {
+-            NetworkManager.c--;
++        try {
++            for(; NetworkManager.a(a); NetworkManager.d(a));
++        } finally {
++            synchronized(NetworkManager.a) {
++                NetworkManager.c--;
++            }
+         }
+-        throw exception2;
+     }
+ }
+diff --git a/net/minecraft/server/PlayerInstance.java b/net/minecraft/server/PlayerInstance.java
+index a7b03bf..3e41aa3 100644
+--- a/net/minecraft/server/PlayerInstance.java
++++ b/net/minecraft/server/PlayerInstance.java
+@@ -31,7 +31,7 @@ class PlayerInstance {
+ 
+     public PlayerInstance(PlayerManager playermanager, int i1, int j1) {
+         a = playermanager;
+-        super();
++        // super();
+         b = new ArrayList();
+         f = new short[10];
+         g = 0;
+diff --git a/net/minecraft/server/ServerGuiCommandListener.java b/net/minecraft/server/ServerGuiCommandListener.java
+index 689802c..23788d7 100644
+--- a/net/minecraft/server/ServerGuiCommandListener.java
++++ b/net/minecraft/server/ServerGuiCommandListener.java
+@@ -21,7 +21,7 @@ class ServerGuiCommandListener
+     ServerGuiCommandListener(ServerGUI servergui, JTextField jtextfield) {
+         b = servergui;
+         a = jtextfield;
+-        super();
++        // super();
+     }
+ 
+     public void actionPerformed(ActionEvent actionevent) {
+diff --git a/net/minecraft/server/ServerWindowAdapter.java b/net/minecraft/server/ServerWindowAdapter.java
+index f19ac5f..55e912b 100644
+--- a/net/minecraft/server/ServerWindowAdapter.java
++++ b/net/minecraft/server/ServerWindowAdapter.java
+@@ -17,7 +17,7 @@ final class ServerWindowAdapter extends WindowAdapter {
+ 
+     ServerWindowAdapter(MinecraftServer minecraftserver) {
+         a = minecraftserver;
+-        super();
++        // super();
+     }
+ 
+     public void windowClosing(WindowEvent windowevent) {
+diff --git a/net/minecraft/server/ThreadCommandReader.java b/net/minecraft/server/ThreadCommandReader.java
+index a1f4871..d21bee0 100644
+--- a/net/minecraft/server/ThreadCommandReader.java
++++ b/net/minecraft/server/ThreadCommandReader.java
+@@ -16,7 +16,7 @@ public class ThreadCommandReader extends Thread {
+ 
+     public ThreadCommandReader(MinecraftServer minecraftserver) {
+         a = minecraftserver;
+-        super();
++        // super();
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/ThreadLoginVerifier.java b/net/minecraft/server/ThreadLoginVerifier.java
+index b0a6310..5dbcb1c 100644
+--- a/net/minecraft/server/ThreadLoginVerifier.java
++++ b/net/minecraft/server/ThreadLoginVerifier.java
+@@ -19,7 +19,7 @@ class ThreadLoginVerifier extends Thread {
+     ThreadLoginVerifier(NetLoginHandler netloginhandler, Packet1Login packet1login) {
+         b = netloginhandler;
+         a = packet1login;
+-        super();
++        // super();
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/ThreadMonitorConnection.java b/net/minecraft/server/ThreadMonitorConnection.java
+index 2785132..f4e7d58 100644
+--- a/net/minecraft/server/ThreadMonitorConnection.java
++++ b/net/minecraft/server/ThreadMonitorConnection.java
+@@ -15,7 +15,7 @@ class ThreadMonitorConnection extends Thread {
+ 
+     ThreadMonitorConnection(NetworkManager networkmanager) {
+         a = networkmanager;
+-        super();
++        // super();
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/ThreadServerApplication.java b/net/minecraft/server/ThreadServerApplication.java
+index d5f4647..218d2f8 100644
+--- a/net/minecraft/server/ThreadServerApplication.java
++++ b/net/minecraft/server/ThreadServerApplication.java
+@@ -15,7 +15,7 @@ public final class ThreadServerApplication extends Thread {
+ 
+     public ThreadServerApplication(String s, MinecraftServer minecraftserver) {
+         a = minecraftserver;
+-        super(s);
++        // super(s);
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/ThreadSleepForever.java b/net/minecraft/server/ThreadSleepForever.java
+index 5c89981..5625ba9 100644
+--- a/net/minecraft/server/ThreadSleepForever.java
++++ b/net/minecraft/server/ThreadSleepForever.java
+@@ -15,7 +15,7 @@ public class ThreadSleepForever extends Thread {
+ 
+     public ThreadSleepForever(MinecraftServer minecraftserver) {
+         a = minecraftserver;
+-        super();
++        // super();
+         setDaemon(true);
+         start();
+     }
