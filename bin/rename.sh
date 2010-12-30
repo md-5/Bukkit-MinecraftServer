@@ -43,6 +43,15 @@ java -jar $JARJAR process $RULES $SERVER $OUTPUT_TMP > /dev/null 2>&1
 echo "Repackaging classfiles into net.minecraft.server"
 java -jar $JARJAR process $NAMESPACE_RULES $OUTPUT_TMP $OUTPUT > /dev/null 2>&1
 
+echo "Fix stupid jarjar touching resource files"
+TMPFOLDER=tmp.$$
+rm -rf $TMPFOLDER
+mkdir $TMPFOLDER
+unzip -d $TMPFOLDER $OUTPUT net/minecraft/server/font.txt net/minecraft/server/null
+zip -d $OUTPUT net/minecraft/server/font.txt net/minecraft/server/null
+zip -r -j $OUTPUT $TMPFOLDER
+rm -rf $TMPFOLDER
+
 rm $OUTPUT_TMP
 
 echo "New modified minecraft_server.jar: $OUTPUT"
