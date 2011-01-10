@@ -1,79 +1,85 @@
 diff --git a/net/minecraft/server/GuiLogFormatter.java b/net/minecraft/server/GuiLogFormatter.java
-index 6a3ba8b..4294262 100644
+index ced8777..5b294db 100644
 --- a/net/minecraft/server/GuiLogFormatter.java
 +++ b/net/minecraft/server/GuiLogFormatter.java
-@@ -18,7 +18,7 @@ class GuiLogFormatter extends Formatter {
+@@ -17,8 +17,8 @@ class GuiLogFormatter extends Formatter {
+     final GuiLogOutputHandler a; /* synthetic field */
  
      GuiLogFormatter(GuiLogOutputHandler guilogoutputhandler) {
-         a = guilogoutputhandler;
--        super();
-+        // super();
+-        a = guilogoutputhandler;
+         super();
++        a = guilogoutputhandler;
      }
  
      public String format(LogRecord logrecord) {
 diff --git a/net/minecraft/server/GuiStatsListener.java b/net/minecraft/server/GuiStatsListener.java
-index b77e57a..99615d3 100644
+index 26b87a3..b37ed99 100644
 --- a/net/minecraft/server/GuiStatsListener.java
 +++ b/net/minecraft/server/GuiStatsListener.java
-@@ -18,7 +18,7 @@ class GuiStatsListener
+@@ -17,8 +17,8 @@ class GuiStatsListener
+     final GuiStatsComponent a; /* synthetic field */
  
      GuiStatsListener(GuiStatsComponent guistatscomponent) {
-         a = guistatscomponent;
--        super();
-+        // super();
+-        a = guistatscomponent;
+         super();
++        a = guistatscomponent;
      }
  
      public void actionPerformed(ActionEvent actionevent) {
 diff --git a/net/minecraft/server/MinecartTrackLogic.java b/net/minecraft/server/MinecartTrackLogic.java
-index b76547a..7a4c0ac 100644
+index d0430f7..886dcae 100644
 --- a/net/minecraft/server/MinecartTrackLogic.java
 +++ b/net/minecraft/server/MinecartTrackLogic.java
-@@ -23,7 +23,7 @@ class MinecartTrackLogic {
+@@ -22,8 +22,8 @@ class MinecartTrackLogic {
+     final BlockMinecartTrack a; /* synthetic field */
  
      public MinecartTrackLogic(BlockMinecartTrack blockminecarttrack, World world, int i, int j, int k) {
-         a = blockminecarttrack;
--        super();
-+        // super();
-         g = new ArrayList();
+-        a = blockminecarttrack;
+         super();
++        a = blockminecarttrack;
+         g = ((List) (new ArrayList()));
          b = world;
          c = i;
 diff --git a/net/minecraft/server/NetworkAcceptThread.java b/net/minecraft/server/NetworkAcceptThread.java
-index b5e1be0..e596f0c 100644
+index 8fef705..cd5e19f 100644
 --- a/net/minecraft/server/NetworkAcceptThread.java
 +++ b/net/minecraft/server/NetworkAcceptThread.java
-@@ -19,7 +19,7 @@ class NetworkAcceptThread extends Thread {
+@@ -17,9 +17,9 @@ class NetworkAcceptThread extends Thread {
+     final NetworkListenThread b; /* synthetic field */
+ 
      NetworkAcceptThread(NetworkListenThread networklistenthread, String s, MinecraftServer minecraftserver) {
++        super(s);
          b = networklistenthread;
          a = minecraftserver;
 -        super(s);
-+        // super(s);
      }
  
      public void run() {
 diff --git a/net/minecraft/server/NetworkMasterThread.java b/net/minecraft/server/NetworkMasterThread.java
-index 62a097d..ce899bb 100644
+index b004ab9..eee7ad2 100644
 --- a/net/minecraft/server/NetworkMasterThread.java
 +++ b/net/minecraft/server/NetworkMasterThread.java
-@@ -15,7 +15,7 @@ class NetworkMasterThread extends Thread {
+@@ -14,8 +14,8 @@ class NetworkMasterThread extends Thread {
+     final NetworkManager a; /* synthetic field */
  
      NetworkMasterThread(NetworkManager networkmanager) {
-         a = networkmanager;
--        super();
-+        // super();
+-        a = networkmanager;
+         super();
++        a = networkmanager;
      }
  
      public void run() {
 diff --git a/net/minecraft/server/NetworkReaderThread.java b/net/minecraft/server/NetworkReaderThread.java
-index a7b7c03..e762404 100644
+index bd26eda..0243371 100644
 --- a/net/minecraft/server/NetworkReaderThread.java
 +++ b/net/minecraft/server/NetworkReaderThread.java
 @@ -14,24 +14,20 @@ class NetworkReaderThread extends Thread {
      final NetworkManager a; /* synthetic field */
  
      NetworkReaderThread(NetworkManager networkmanager, String s) {
-+        super(s);
-         a = networkmanager;
--        super(s);
+-        a = networkmanager;
+         super(s);
++        a = networkmanager;
      }
  
      public void run() {
@@ -100,16 +106,16 @@ index a7b7c03..e762404 100644
      }
  }
 diff --git a/net/minecraft/server/NetworkWriterThread.java b/net/minecraft/server/NetworkWriterThread.java
-index 8dfead9..fda8d91 100644
+index 2da0529..618ddb5 100644
 --- a/net/minecraft/server/NetworkWriterThread.java
 +++ b/net/minecraft/server/NetworkWriterThread.java
 @@ -14,24 +14,20 @@ class NetworkWriterThread extends Thread {
      final NetworkManager a; /* synthetic field */
  
      NetworkWriterThread(NetworkManager networkmanager, String s) {
-+        super(s);
-         a = networkmanager;
--        super(s);
+-        a = networkmanager;
+         super(s);
++        a = networkmanager;
      }
  
      public void run() {
@@ -136,150 +142,93 @@ index 8dfead9..fda8d91 100644
      }
  }
 diff --git a/net/minecraft/server/PlayerInstance.java b/net/minecraft/server/PlayerInstance.java
-index 47bc818..81c3c4e 100644
+index d87058d..dcce686 100644
 --- a/net/minecraft/server/PlayerInstance.java
 +++ b/net/minecraft/server/PlayerInstance.java
-@@ -32,7 +32,7 @@ class PlayerInstance {
+@@ -31,8 +31,8 @@ class PlayerInstance {
+     final PlayerManager a; /* synthetic field */
  
      public PlayerInstance(PlayerManager playermanager, int i1, int j1) {
-         a = playermanager;
--        super();
-+        // super();
-         b = new ArrayList();
+-        a = playermanager;
+         super();
++        a = playermanager;
+         b = ((List) (new ArrayList()));
          f = new short[10];
          g = 0;
 diff --git a/net/minecraft/server/RecipeSorter.java b/net/minecraft/server/RecipeSorter.java
-index bb4f762..671afa4 100644
+index 23a0dd2..1cc6561 100644
 --- a/net/minecraft/server/RecipeSorter.java
 +++ b/net/minecraft/server/RecipeSorter.java
-@@ -17,7 +17,7 @@ class RecipeSorter
+@@ -16,8 +16,8 @@ class RecipeSorter
+     final CraftingManager a; /* synthetic field */
  
      RecipeSorter(CraftingManager craftingmanager) {
-         a = craftingmanager;
--        super();
-+        // super();
+-        a = craftingmanager;
+         super();
++        a = craftingmanager;
      }
  
      public int a(CraftingRecipe craftingrecipe, CraftingRecipe craftingrecipe1) {
 diff --git a/net/minecraft/server/ServerGuiCommandListener.java b/net/minecraft/server/ServerGuiCommandListener.java
-index 689802c..23788d7 100644
+index 17f9866..261c2c7 100644
 --- a/net/minecraft/server/ServerGuiCommandListener.java
 +++ b/net/minecraft/server/ServerGuiCommandListener.java
-@@ -21,7 +21,7 @@ class ServerGuiCommandListener
+@@ -19,9 +19,9 @@ class ServerGuiCommandListener
+     final ServerGUI b; /* synthetic field */
+ 
      ServerGuiCommandListener(ServerGUI servergui, JTextField jtextfield) {
++        super();
          b = servergui;
          a = jtextfield;
 -        super();
-+        // super();
      }
  
      public void actionPerformed(ActionEvent actionevent) {
 diff --git a/net/minecraft/server/ServerGuiFocusAdapter.java b/net/minecraft/server/ServerGuiFocusAdapter.java
-index b977d1b..1735e1a 100644
+index f484d52..6e95b0a 100644
 --- a/net/minecraft/server/ServerGuiFocusAdapter.java
 +++ b/net/minecraft/server/ServerGuiFocusAdapter.java
-@@ -17,7 +17,7 @@ class ServerGuiFocusAdapter extends FocusAdapter {
+@@ -16,8 +16,8 @@ class ServerGuiFocusAdapter extends FocusAdapter {
+     final ServerGUI a; /* synthetic field */
  
      ServerGuiFocusAdapter(ServerGUI servergui) {
-         a = servergui;
--        super();
-+        // super();
+-        a = servergui;
+         super();
++        a = servergui;
      }
  
      public void focusGained(FocusEvent focusevent) {
 diff --git a/net/minecraft/server/ServerWindowAdapter.java b/net/minecraft/server/ServerWindowAdapter.java
-index f19ac5f..55e912b 100644
+index 1c1b29c..9d582ea 100644
 --- a/net/minecraft/server/ServerWindowAdapter.java
 +++ b/net/minecraft/server/ServerWindowAdapter.java
-@@ -17,7 +17,7 @@ final class ServerWindowAdapter extends WindowAdapter {
+@@ -16,8 +16,8 @@ final class ServerWindowAdapter extends WindowAdapter {
+     final MinecraftServer a; /* synthetic field */
  
      ServerWindowAdapter(MinecraftServer minecraftserver) {
-         a = minecraftserver;
--        super();
-+        // super();
+-        a = minecraftserver;
+         super();
++        a = minecraftserver;
      }
  
      public void windowClosing(WindowEvent windowevent) {
 diff --git a/net/minecraft/server/SlotArmor.java b/net/minecraft/server/SlotArmor.java
-index efc5d20..c17eaef 100644
+index dd40d9a..f4b1e10 100644
 --- a/net/minecraft/server/SlotArmor.java
 +++ b/net/minecraft/server/SlotArmor.java
-@@ -18,7 +18,7 @@ class SlotArmor extends Slot {
+@@ -16,9 +16,9 @@ class SlotArmor extends Slot {
+     final CraftingInventoryPlayerCB b; /* synthetic field */
+ 
      SlotArmor(CraftingInventoryPlayerCB craftinginventoryplayercb, IInventory iinventory, int i, int j, int k, int l) {
++        super(iinventory, i, j, k);
          b = craftinginventoryplayercb;
          a = l;
 -        super(iinventory, i, j, k);
-+        // super(iinventory, i, j, k);
      }
  
      public int a() {
-diff --git a/net/minecraft/server/ThreadCommandReader.java b/net/minecraft/server/ThreadCommandReader.java
-index a1f4871..d21bee0 100644
---- a/net/minecraft/server/ThreadCommandReader.java
-+++ b/net/minecraft/server/ThreadCommandReader.java
-@@ -16,7 +16,7 @@ public class ThreadCommandReader extends Thread {
- 
-     public ThreadCommandReader(MinecraftServer minecraftserver) {
-         a = minecraftserver;
--        super();
-+        // super();
-     }
- 
-     public void run() {
-diff --git a/net/minecraft/server/ThreadLoginVerifier.java b/net/minecraft/server/ThreadLoginVerifier.java
-index 944ce8f..c478385 100644
---- a/net/minecraft/server/ThreadLoginVerifier.java
-+++ b/net/minecraft/server/ThreadLoginVerifier.java
-@@ -20,7 +20,7 @@ class ThreadLoginVerifier extends Thread {
-     ThreadLoginVerifier(NetLoginHandler netloginhandler, Packet1Login packet1login) {
-         b = netloginhandler;
-         a = packet1login;
--        super();
-+        // super();
-     }
- 
-     public void run() {
-diff --git a/net/minecraft/server/ThreadMonitorConnection.java b/net/minecraft/server/ThreadMonitorConnection.java
-index dbe6c23..85788b3 100644
---- a/net/minecraft/server/ThreadMonitorConnection.java
-+++ b/net/minecraft/server/ThreadMonitorConnection.java
-@@ -15,7 +15,7 @@ class ThreadMonitorConnection extends Thread {
- 
-     ThreadMonitorConnection(NetworkManager networkmanager) {
-         a = networkmanager;
--        super();
-+        // super();
-     }
- 
-     public void run() {
-diff --git a/net/minecraft/server/ThreadServerApplication.java b/net/minecraft/server/ThreadServerApplication.java
-index d5f4647..218d2f8 100644
---- a/net/minecraft/server/ThreadServerApplication.java
-+++ b/net/minecraft/server/ThreadServerApplication.java
-@@ -15,7 +15,7 @@ public final class ThreadServerApplication extends Thread {
- 
-     public ThreadServerApplication(String s, MinecraftServer minecraftserver) {
-         a = minecraftserver;
--        super(s);
-+        // super(s);
-     }
- 
-     public void run() {
-diff --git a/net/minecraft/server/ThreadSleepForever.java b/net/minecraft/server/ThreadSleepForever.java
-index 5c89981..5625ba9 100644
---- a/net/minecraft/server/ThreadSleepForever.java
-+++ b/net/minecraft/server/ThreadSleepForever.java
-@@ -15,7 +15,7 @@ public class ThreadSleepForever extends Thread {
- 
-     public ThreadSleepForever(MinecraftServer minecraftserver) {
-         a = minecraftserver;
--        super();
-+        // super();
-         setDaemon(true);
-         start();
-     }
-diff --git a/SpawnerAnimals.java b/SpawnerAnimals.java
-index 1c29aa3..6aa52e1 100644
+diff --git a/net/minecraft/server/SpawnerAnimals.java b/net/minecraft/server/SpawnerAnimals.java
+index 471c49b..69a08a2 100644
 --- a/net/minecraft/server/SpawnerAnimals.java
 +++ b/net/minecraft/server/SpawnerAnimals.java
 @@ -28,127 +28,100 @@ public final class SpawnerAnimals {
@@ -290,18 +239,17 @@ index 1c29aa3..6aa52e1 100644
 -        int k;
          a.clear();
 -        for(int i = 0; i < world.d.size(); i++) {
--            EntityPlayer entityplayer = (EntityPlayer)world.d.get(i);
++
++        for(int i = 0; i < world.d.size(); ++i) {
+             EntityPlayer entityplayer = (EntityPlayer)world.d.get(i);
 -            int l = MathHelper.b(entityplayer.p / 16D);
 -            int i1 = MathHelper.b(entityplayer.r / 16D);
-+
-+        for(int i = 0; i < world.k.size(); ++i) {
-+            EntityPlayer entityplayer = (EntityPlayer)world.k.get(i);
-+            int l = MathHelper.b(entityplayer.l / 16.0D);
-+            int i1 = MathHelper.b(entityplayer.n / 16.0D);
++            int l = MathHelper.b(entityplayer.p / 16.0D);
++            int i1 = MathHelper.b(entityplayer.r / 16.0D);
              byte byte0 = 8;
 -            for(int j1 = -byte0; j1 <= byte0; j1++) {
 -                for(int k1 = -byte0; k1 <= byte0; k1++)
--                    a.add(new ChunkCoordIntPair(j1 + l, k1 + i1));
+-                    a.add(((Object) (new ChunkCoordIntPair(j1 + l, k1 + i1))));
  
 +            for(int j = -byte0; j <= byte0; ++j) {
 +                for(int k = -byte0; k <= byte0; ++k) {
@@ -366,9 +314,9 @@ index 1c29aa3..6aa52e1 100644
 -        if(i4 >= 4) goto _L6; else goto _L5
 -_L5:
 -        EntityLiving entityliving;
--        j3 += world.l.nextInt(byte1) - world.l.nextInt(byte1);
+-        j3 += world.l.nextInt(((int) (byte1))) - world.l.nextInt(((int) (byte1)));
 -        k3 += world.l.nextInt(1) - world.l.nextInt(1);
--        l3 += world.l.nextInt(byte1) - world.l.nextInt(byte1);
+-        l3 += world.l.nextInt(((int) (byte1))) - world.l.nextInt(((int) (byte1)));
 -        if(!world.d(j3, k3 - 1, l3) || world.d(j3, k3, l3) || world.c(j3, k3, l3).d() || world.d(j3, k3 + 1, l3))
 -            continue; /* Loop/switch isn't completed */
 -        float f = (float)j3 + 0.5F;
@@ -397,12 +345,12 @@ index 1c29aa3..6aa52e1 100644
 -        if(!entityliving.a())
 -            break; /* Loop/switch isn't completed */
 -        l2++;
--        world.a(entityliving);
+-        world.a(((Entity) (entityliving)));
 -        if((entityliving instanceof EntitySpider) && world.l.nextInt(100) == 0) {
 -            EntitySkeleton entityskeleton = new EntitySkeleton(world);
 -            entityskeleton.c(f, f1, f2, entityliving.v, 0.0F);
--            world.a(entityskeleton);
--            entityskeleton.e(entityliving);
+-            world.a(((Entity) (entityskeleton)));
+-            entityskeleton.e(((Entity) (entityliving)));
 +        int i = 0;
 +
 +        for(int k = 0; k < EnumCreatureType.values().length; ++k) {
@@ -413,11 +361,11 @@ index 1c29aa3..6aa52e1 100644
 +                label90:
 +                while(iterator.hasNext()) {
 +                    ChunkCoordIntPair chunkcoordintpair = (ChunkCoordIntPair)iterator.next();
-+                    if(world.m.nextInt(50) == 0) {
++                    if(world.l.nextInt(50) == 0) {
 +                        MobSpawnerBase mobspawnerbase = world.a().a(chunkcoordintpair);
 +                        Class[] aclass = mobspawnerbase.a(enumcreaturetype);
 +                        if(aclass != null && aclass.length != 0) {
-+                            int l1 = world.m.nextInt(aclass.length);
++                            int l1 = world.l.nextInt(aclass.length);
 +                            ChunkPosition chunkposition = a(world, chunkcoordintpair.a * 16, chunkcoordintpair.b * 16);
 +                            int i1 = chunkposition.a;
 +                            int j1 = chunkposition.b;
@@ -432,9 +380,9 @@ index 1c29aa3..6aa52e1 100644
 +                                    byte byte0 = 6;
 +
 +                                    for(int l3 = 0; l3 < 4; ++l3) {
-+                                        i2 += world.m.nextInt(byte0) - world.m.nextInt(byte0);
-+                                        j2 += world.m.nextInt(1) - world.m.nextInt(1);
-+                                        k2 += world.m.nextInt(byte0) - world.m.nextInt(byte0);
++                                        i2 += world.l.nextInt(byte0) - world.l.nextInt(byte0);
++                                        j2 += world.l.nextInt(1) - world.l.nextInt(1);
++                                        k2 += world.l.nextInt(byte0) - world.l.nextInt(byte0);
 +                                        if(world.d(i2, j2 - 1, k2) && !world.d(i2, j2, k2) && !world.c(i2, j2, k2).d() && !world.d(i2, j2 + 1, k2)) {
 +                                            float f = (float)i2 + 0.5F;
 +                                            float f1 = (float)j2;
@@ -453,13 +401,13 @@ index 1c29aa3..6aa52e1 100644
 +                                                        return i;
 +                                                    }
 +
-+                                                    entityliving.c((double)f, (double)f1, (double)f2, world.m.nextFloat() * 360.0F, 0.0F);
++                                                    entityliving.c((double)f, (double)f1, (double)f2, world.l.nextFloat() * 360.0F, 0.0F);
 +                                                    if(entityliving.a()) {
 +                                                        ++j;
 +                                                        world.a(entityliving);
-+                                                        if(entityliving instanceof EntitySpider && world.m.nextInt(100) == 0) {
++                                                        if(entityliving instanceof EntitySpider && world.l.nextInt(100) == 0) {
 +                                                            EntitySkeleton entityskeleton = new EntitySkeleton(world);
-+                                                            entityskeleton.c((double)f, (double)f1, (double)f2, entityliving.r, 0.0F);
++                                                            entityskeleton.c((double)f, (double)f1, (double)f2, entityliving.v, 0.0F);
 +                                                            world.a(entityskeleton);
 +                                                            entityskeleton.e(entityliving);
 +                                                        }
@@ -497,3 +445,74 @@ index 1c29aa3..6aa52e1 100644
      }
  
  }
+diff --git a/net/minecraft/server/ThreadCommandReader.java b/net/minecraft/server/ThreadCommandReader.java
+index 1b5ef16..0698b07 100644
+--- a/net/minecraft/server/ThreadCommandReader.java
++++ b/net/minecraft/server/ThreadCommandReader.java
+@@ -15,8 +15,8 @@ public class ThreadCommandReader extends Thread {
+     final MinecraftServer a; /* synthetic field */
+ 
+     public ThreadCommandReader(MinecraftServer minecraftserver) {
+-        a = minecraftserver;
+         super();
++        a = minecraftserver;
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/ThreadLoginVerifier.java b/net/minecraft/server/ThreadLoginVerifier.java
+index 5c6e0c5..9ef8d85 100644
+--- a/net/minecraft/server/ThreadLoginVerifier.java
++++ b/net/minecraft/server/ThreadLoginVerifier.java
+@@ -18,9 +18,9 @@ class ThreadLoginVerifier extends Thread {
+     final NetLoginHandler b; /* synthetic field */
+ 
+     ThreadLoginVerifier(NetLoginHandler netloginhandler, Packet1Login packet1login) {
++        super();
+         b = netloginhandler;
+         a = packet1login;
+-        super();
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/ThreadMonitorConnection.java b/net/minecraft/server/ThreadMonitorConnection.java
+index c8e195c..1e897c9 100644
+--- a/net/minecraft/server/ThreadMonitorConnection.java
++++ b/net/minecraft/server/ThreadMonitorConnection.java
+@@ -14,8 +14,8 @@ class ThreadMonitorConnection extends Thread {
+     final NetworkManager a; /* synthetic field */
+ 
+     ThreadMonitorConnection(NetworkManager networkmanager) {
+-        a = networkmanager;
+         super();
++        a = networkmanager;
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/ThreadServerApplication.java b/net/minecraft/server/ThreadServerApplication.java
+index e97d224..9a81f64 100644
+--- a/net/minecraft/server/ThreadServerApplication.java
++++ b/net/minecraft/server/ThreadServerApplication.java
+@@ -14,8 +14,8 @@ public final class ThreadServerApplication extends Thread {
+     final MinecraftServer a; /* synthetic field */
+ 
+     public ThreadServerApplication(String s, MinecraftServer minecraftserver) {
+-        a = minecraftserver;
+         super(s);
++        a = minecraftserver;
+     }
+ 
+     public void run() {
+diff --git a/net/minecraft/server/ThreadSleepForever.java b/net/minecraft/server/ThreadSleepForever.java
+index 8e77865..01db0e0 100644
+--- a/net/minecraft/server/ThreadSleepForever.java
++++ b/net/minecraft/server/ThreadSleepForever.java
+@@ -14,8 +14,8 @@ public class ThreadSleepForever extends Thread {
+     final MinecraftServer a; /* synthetic field */
+ 
+     public ThreadSleepForever(MinecraftServer minecraftserver) {
+-        a = minecraftserver;
+         super();
++        a = minecraftserver;
+         setDaemon(true);
+         start();
+     }

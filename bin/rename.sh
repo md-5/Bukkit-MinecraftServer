@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 SCRIPT=$(readlink -f $0)
 BASEDIR=`dirname $SCRIPT`/..
 
@@ -38,19 +40,21 @@ OUTPUT=$BASEDIR/minecraft_server.jar
 OUTPUT_TMP=$OUTPUT.tmp
 
 echo "Renaming classfiles according to $RULES"
-java -jar $JARJAR process $RULES $SERVER $OUTPUT_TMP > /dev/null 2>&1
+java -jar $JARJAR process $RULES $SERVER $OUTPUT_TMP
 
 echo "Repackaging classfiles into net.minecraft.server"
-java -jar $JARJAR process $NAMESPACE_RULES $OUTPUT_TMP $OUTPUT > /dev/null 2>&1
+java -jar $JARJAR process $NAMESPACE_RULES $OUTPUT_TMP $OUTPUT
 
-echo "Fix stupid jarjar touching resource files"
-TMPFOLDER=tmp.$$
-rm -rf $TMPFOLDER
-mkdir $TMPFOLDER
-unzip -d $TMPFOLDER $OUTPUT net/minecraft/server/font.txt net/minecraft/server/null
-zip -d $OUTPUT net/minecraft/server/font.txt net/minecraft/server/null
-zip -r -j $OUTPUT $TMPFOLDER
-rm -rf $TMPFOLDER
+if unzip -l $OUTPUT | grep -q 'font.txt'; then
+    echo "Fix stupid jarjar touching resource files"
+    TMPFOLDER=tmp.$$
+    rm -rf $TMPFOLDER
+    mkdir $TMPFOLDER
+    unzip -d $TMPFOLDER $OUTPUT net/minecraft/server/font.txt net/minecraft/server/null
+    zip -d $OUTPUT net/minecraft/server/font.txt net/minecraft/server/null
+    zip -r -j $OUTPUT $TMPFOLDER
+    rm -rf $TMPFOLDER
+fi
 
 rm $OUTPUT_TMP
 

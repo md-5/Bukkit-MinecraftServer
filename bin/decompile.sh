@@ -35,24 +35,24 @@ OUTPUT_TMP2=$$.tmp2
 
 echo "Unpacking $SERVER"
 mkdir $OUTPUT_TMP
-unzip -d $OUTPUT_TMP $SERVER > /dev/null 2>&1
+unzip -d $OUTPUT_TMP $SERVER
 
 echo "Preparing classfiles with jadretro"
-java -jar $JADRETRO `find $OUTPUT_TMP -name '*.class' -print` > /dev/null 2>&1
+java -jar $JADRETRO `find $OUTPUT_TMP -name '*.class' -print`
 
 echo "Decompiling with jad"
 mkdir $OUTPUT_TMP2
-$JAD -ff -nonlb -dead -o -r -s .java -d $OUTPUT_TMP2 `find $OUTPUT_TMP -name '*.class' -print` > /dev/null 2>&1
+$JAD -safe -ff -nonlb -dead -o -r -s .java -d $OUTPUT_TMP2 `find $OUTPUT_TMP -name '*.class' -print`
 rm -rf $OUTPUT_TMP
 
 echo "Applying patch to fix some decompilation issues"
 patch -d $OUTPUT_TMP2 -p1 < $PATCH
 
 echo "Removing comments and excessn newlines"
-perl -i -nlpe'BEGIN { $/ = undef }; s#^// .*\n##gm; s/\r//g; s/\n{2,}/\n\n/g; s/(^\n*|\n*$)//' $OUTPUT_TMP2/net/minecraft/server/*.java
+perl -i -nlpe'BEGIN { $/ = undef }; s#^// .*\n##gm; s/\r//g; s/\n{2,}/\n\n/g; s/(^\n*|\n*$)//gs; s/\n\s+( implements )/$1/gs; s/(, )\n\s+/$1/gs; s/\(Object\) //g; s/(\})\n*(\s*\})/$1\n$2/gs' $OUTPUT_TMP2/net/minecraft/server/*.java
 
 echo "Reformatting source";
-$JACOBE -cfg=$JACOBECFG -nobackup -overwrite -outext=java $OUTPUT_TMP2/net/minecraft/server/*.java >/dev/null 2>&1
+$JACOBE -cfg=$JACOBECFG -nobackup -overwrite -outext=java $OUTPUT_TMP2/net/minecraft/server/*.java
 
 echo "Creating source zip"
 pushd $OUTPUT_TMP2 > /dev/null
