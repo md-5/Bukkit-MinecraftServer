@@ -48,14 +48,15 @@ rm -rf $OUTPUT_TMP
 echo "Applying patch to fix some decompilation issues"
 patch -d $OUTPUT_TMP2 -p1 < $PATCH
 
-echo "Removing comments and excessn newlines"
-perl -i -nlpe'BEGIN { $/ = undef }; s#^// .*\n##gm; s/\r//g; s/\n{2,}/\n\n/g; s/(^\n*|\n*$)//gs; s/\n\s+( implements )/$1/gs; s/(, )\n\s+/$1/gs; s/\(Object\) //g; s/(\})\n*(\s*\})/$1\n$2/gs' $OUTPUT_TMP2/net/minecraft/server/*.java
-
 echo "Reformatting source";
 $JACOBE -cfg=$JACOBECFG -nobackup -overwrite -outext=java $OUTPUT_TMP2/net/minecraft/server/*.java
 
+echo "Removing comments and excess newlines"
+perl -i -nlpe'BEGIN { $/ = undef }; s#^// .*\n##gm; s/\r//g; s/\n{2,}/\n\n/g; s/(^\n*|\n*$)//gs; s/\n\s+( implements )/$1/gs; s/(, )\n\s+/$1/gs; s/\(Object\) //g; s/(\})\n{2,}(\s*\})/$1\n$2/gs; s/(\})\n{2,}(\s*\})/$1\n$2/gs;' $OUTPUT_TMP2/net/minecraft/server/*.java
+
 echo "Creating source zip"
 pushd $OUTPUT_TMP2 > /dev/null
+if [[ -e $OUTPUT ]]; then rm -rf $OUTPUT; fi
 zip -r $OUTPUT * > /dev/null 2>&1
 popd > /dev/null
 

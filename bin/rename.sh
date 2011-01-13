@@ -43,6 +43,7 @@ echo "Renaming classfiles according to $RULES"
 java -jar $JARJAR process $RULES $SERVER $OUTPUT_TMP
 
 echo "Repackaging classfiles into net.minecraft.server"
+if [[ -e $OUTPUT ]]; then rm -rf $OUTPUT; fi
 java -jar $JARJAR process $NAMESPACE_RULES $OUTPUT_TMP $OUTPUT
 
 if unzip -l $OUTPUT | grep -q 'font.txt'; then
