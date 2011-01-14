@@ -11,6 +11,7 @@ rule aj BlockStationary
 rule ak ServerGuiFocusAdapter
 rule al BlockTNT
 rule am BlockSlowSand
+rule ma EnumCreatureType
 rule an Packet1Login
 rule ao Packet11PlayerPosition
 rule a Packet7
@@ -22,6 +23,7 @@ rule at PlayerInstance
 rule au RecipesFood
 rule av NoiseGeneratorPerlin
 rule aw MaterialLogic
+rule ax EntityWaterMob
 rule ay InventoryLargeChest
 rule az CompressedStreamTools
 rule ba ServerCommand
@@ -29,6 +31,7 @@ rule bb BlockButton
 rule bc ItemPickaxe
 rule bd Packet106
 rule be BlockFlowing
+rule bf TileEntityDispenser
 rule bg BlockCactus
 rule bh ItemBucket
 rule bi BlockDirt
@@ -36,6 +39,7 @@ rule bj IChunkLoader
 rule bk WorldGenFlowers
 rule bl EntityAnimals
 rule bm TileEntity
+rule bn ItemCloth
 rule bo Packet9
 rule bp BlockLeaves
 rule bq CraftingInventoryFurnaceCB
@@ -43,6 +47,8 @@ rule br EntityGhast
 rule bs BlockMinecartTrack
 rule bt BlockRedstoneOre
 rule bu Vec3D
+rule bv EnumToolMaterial
+rule b WatchableObject
 rule bw BlockPressurePlate
 rule bx EntityCow
 rule by EntitySnowball
@@ -56,7 +62,9 @@ rule cf CraftingInventoryChestCB
 rule cg NoiseGenerator2
 rule ch NBTTagInt
 rule ci EntityFireball
+rule cj BlockNote
 rule ck SlotArmor
+rule cl WorldGenTaiga1
 rule cm Packet33RelEntityMoveLook
 rule cn WorldGenHellLava
 rule co ItemSword
@@ -83,6 +91,8 @@ rule dg Explosion
 rule dh EntityTNTPrimed
 rule di BlockMobSpawner
 rule dj ItemBow
+rule dk MobSpawnerForest
+rule dl BlockSandStone
 rule dm Packet6SpawnPosition
 rule dn NoiseGenerator
 rule do PathEntity
@@ -120,6 +130,7 @@ rule es MaterialLiquid
 rule et WorldGenLightStone2
 rule eu Packet50PreChunk
 rule ev NetworkListenThread
+rule ew CraftingInventoryDispenserCB
 rule ex ThreadLoginVerifier
 rule ey BlockStone
 rule ez TileEntityFurnace
@@ -139,6 +150,7 @@ rule fm ChunkCache
 rule f NBTTagLong
 rule fn Packet31RelEntityMove
 rule fo NBTTagDouble
+rule fp FurnaceRecipes
 rule fq ItemAxe
 rule fr BlockFurnace
 rule fs IUpdatePlayerListBox
@@ -161,15 +173,20 @@ rule gh BlockMushroom
 rule gi NetHandler
 rule gj EntitySkeleton
 rule gk MobSpawnerDesert
+rule gl TileEntityNote
 rule gm MCHashTable2
+rule g MobSpawnerTaiga
 rule gn MapGenBase
 rule go ChunkLoader
 rule gp Pathfinder
 rule gq RecipeIngots
 rule gr WorldGenCactus
 rule gs ItemRecord
+rule gt ShapelessRecipes
 rule gu EntityBoat
+rule gv Packet19
 rule gw Packet53BlockChange
+rule gx DataWatcher
 rule gy EntityCreeper
 rule gz WorldGenLightStone1
 rule ha NoiseGeneratorOctaves
@@ -182,6 +199,7 @@ rule hg Item
 rule hh Packet130
 rule hi BlockSign
 rule hj Slot
+rule hk ItemLog
 rule hl EntityPlayer
 rule hm NBTTagShort
 rule hn BlockCake
@@ -230,8 +248,9 @@ rule jb EntityEgg
 rule jc EnumArt
 rule jd Packet54
 rule je WorldGenReed
-rule jh Packet100
+rule jf ShapedRecipes
 rule jg CraftingInventoryWorkbenchCB
+rule jh Packet100
 rule ji InventoryPlayer
 rule jj ItemArmor
 rule jk BlockFlower
@@ -242,6 +261,7 @@ rule jo Packet38
 rule j Packet2Handshake
 rule jp WorldProviderHell
 rule jq ChunkPosition
+rule jr EnumMovingObjectType
 rule js EntityPig
 rule jt NibbleArray
 rule ju InventoryCraftResult
@@ -254,6 +274,7 @@ rule ka EntityFlying
 rule kb BlockSnow
 rule kc TileEntityChest
 rule kd EntityFallingSand
+rule ke WorldGenTaiga2
 rule kf Packet14BlockDig
 rule kg BlockFence
 rule kh MCHashTable
@@ -274,6 +295,7 @@ rule ku ThreadMonitorConnection
 rule kv NetworkReaderThread
 rule kw NetworkWriterThread
 rule kx Packet
+rule ky ItemDye
 rule kz WorldGenLiquids
 rule la IBlockAccess
 rule lb BlockDispenser
@@ -293,6 +315,7 @@ rule lo ItemHoe
 rule lp NetServerHandler
 rule lq WorldGenTrees
 rule lr BlockBloodStone
+rule ls MobSpawnerRainforest
 rule lt BlockDoor
 rule lu Path
 rule lv TileEntitySign
@@ -300,6 +323,7 @@ rule lw EntityMinecart
 rule l WorldGenClay
 rule lx NBTTagEnd
 rule ly ChunkProviderServer
+rule lz EmptyChunk
 rule mb ItemPainting
 rule m BlockOre
 rule mc BlockFire
@@ -321,10 +345,12 @@ rule mr ChunkCoordIntPair
 rule ms BlockLightStone
 rule mt Packet0KeepAlive
 rule n PlayerListBox
+rule o WorldGenForest
 rule p Packet105
 rule q BlockOreBlock
 rule r Packet21PickupSpawn
 rule s BlockGravel
+rule t RecipesDyes
 rule u NBTTagFloat
 rule v Packet5PlayerInventory
 rule w BlockCrops

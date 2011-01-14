@@ -228,29 +228,15 @@ index 38245f8..26ddfe7 100644
  
      public int a() {
 diff --git a/net/minecraft/server/SpawnerAnimals.java b/net/minecraft/server/SpawnerAnimals.java
-index 7400ed4..5d9ceae 100644
+index 1762900..d722fd7 100644
 --- a/net/minecraft/server/SpawnerAnimals.java
 +++ b/net/minecraft/server/SpawnerAnimals.java
-@@ -15,158 +15,4 @@ import java.util.*;
- //            EntitySheep
+@@ -29,126 +29,9 @@ public final class SpawnerAnimals {
+     }
  
- public final class SpawnerAnimals {
--
--    private static Set a = new HashSet();
--
--    public SpawnerAnimals() {
--    }
--
--    protected static ChunkPosition a(World world, int i, int j) {
--        int k = i + world.l.nextInt(16);
--        int l = world.l.nextInt(128);
--        int i1 = j + world.l.nextInt(16);
--        return new ChunkPosition(k, l, i1);
--    }
--
--    public static final int a(World world, boolean flag, boolean flag1) {
+     public static final int a(World world, boolean flag, boolean flag1) {
 -        int j;
--        ma ama[];
+-        EnumCreatureType aenumcreaturetype[];
 -        int l;
 -        int j1;
 -        if(!flag && !flag1)
@@ -270,16 +256,16 @@ index 7400ed4..5d9ceae 100644
 -        }
 -
 -        j = 0;
--        ama = ma.values();
--        l = ama.length;
+-        aenumcreaturetype = EnumCreatureType.values();
+-        l = aenumcreaturetype.length;
 -        j1 = 0;
 -_L10:
 -        if(j1 >= l) goto _L2; else goto _L1
 -_L1:
--        ma ma1;
+-        EnumCreatureType enumcreaturetype;
 -        Iterator iterator;
--        ma1 = ama[j1];
--        if(ma1.d() && !flag1 || !ma1.d() && !flag || world.a(ma1.a()) > (ma1.b() * a.size()) / 256)
+-        enumcreaturetype = aenumcreaturetype[j1];
+-        if(enumcreaturetype.d() && !flag1 || !enumcreaturetype.d() && !flag || world.a(enumcreaturetype.a()) > (enumcreaturetype.b() * a.size()) / 256)
 -            continue; /* Loop/switch isn't completed */
 -        iterator = a.iterator();
 -_L4:
@@ -297,14 +283,14 @@ index 7400ed4..5d9ceae 100644
 -                    continue; /* Loop/switch isn't completed */
 -                chunkcoordintpair = (ChunkCoordIntPair)iterator.next();
 -                MobSpawnerBase mobspawnerbase = world.a().a(chunkcoordintpair);
--                aclass = mobspawnerbase.a(ma1);
+-                aclass = mobspawnerbase.a(enumcreaturetype);
 -            } while(aclass == null || aclass.length == 0);
 -            i2 = world.l.nextInt(aclass.length);
 -            ChunkPosition chunkposition = a(world, chunkcoordintpair.a * 16, chunkcoordintpair.b * 16);
 -            j2 = chunkposition.a;
 -            k2 = chunkposition.b;
 -            l2 = chunkposition.c;
--        } while(world.d(j2, k2, l2) || world.c(j2, k2, l2) != ma1.c());
+-        } while(world.d(j2, k2, l2) || world.c(j2, k2, l2) != enumcreaturetype.c());
 -        i3 = 0;
 -        j3 = 0;
 -_L9:
@@ -327,7 +313,7 @@ index 7400ed4..5d9ceae 100644
 -        k3 += world.l.nextInt(((int) (byte1))) - world.l.nextInt(((int) (byte1)));
 -        l3 += world.l.nextInt(1) - world.l.nextInt(1);
 -        i4 += world.l.nextInt(((int) (byte1))) - world.l.nextInt(((int) (byte1)));
--        if(!a(ma1, world, k3, l3, i4))
+-        if(!a(enumcreaturetype, world, k3, l3, i4))
 -            continue; /* Loop/switch isn't completed */
 -        float f = (float)k3 + 0.5F;
 -        float f1 = l3;
@@ -369,27 +355,12 @@ index 7400ed4..5d9ceae 100644
 -          goto _L10
 -_L2:
 -        return j;
--    }
--
--    private static boolean a(ma ma1, World world, int i, int j, int k) {
--        if(ma1.c() == Material.f)
--            return world.c(i, j, k).d() && !world.d(i, j + 1, k);
--        else
--            return world.d(i, j - 1, k) && !world.d(i, j, k) && !world.c(i, j, k).d() && !world.d(i, j + 1, k);
--    }
--
--    private static void a(EntityLiving entityliving, World world, float f, float f1, float f2) {
--        if((entityliving instanceof EntitySpider) && world.l.nextInt(100) == 0) {
--            EntitySkeleton entityskeleton = new EntitySkeleton(world);
--            entityskeleton.c(f, f1, f2, entityliving.v, 0.0F);
--            world.a(((Entity) (entityskeleton)));
--            entityskeleton.e(((Entity) (entityliving)));
--        } else
--        if(entityliving instanceof EntitySheep)
--            ((EntitySheep)entityliving).a(EntitySheep.a(world.l));
--    }
--
- }
++        /**
++         * broken decompile
++         */
+     }
+ 
+     private static boolean a(EnumCreatureType enumcreaturetype, World world, int i, int j, int k) {
 diff --git a/net/minecraft/server/ThreadCommandReader.java b/net/minecraft/server/ThreadCommandReader.java
 index 1b5ef16..0698b07 100644
 --- a/net/minecraft/server/ThreadCommandReader.java
