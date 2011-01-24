@@ -5,9 +5,7 @@ set -e
 SCRIPT=$(readlink -f $0)
 BASEDIR=`dirname $SCRIPT`/..
 
-JADRETRO=$BASEDIR/tools/jadretro.jar
-# No linux version for this :(
-JAD="wine $BASEDIR/tools/jad.exe"
+FERN="java -jar $BASEDIR/tools/fernflower.jar"
 
 JACOBE=$BASEDIR/tools/jacobe
 JACOBECFG=$BASEDIR/tools/jacobe.cfg
@@ -26,39 +24,28 @@ if [[ ! -e $SERVER ]]; then
     exit 0;
 fi
 
-# Dynamicly find the server version
-PATCH=$BASEDIR/patch/`unzip -p $SERVER net/minecraft/server/MinecraftServer.class | strings | grep 'server version' | sed -e 's/^[^0-9]*//' -e 's/_.*//'`.patch
-
 OUTPUT=$BASEDIR/minecraft_server.src.zip
 OUTPUT_TMP=$$.tmp
-OUTPUT_TMP2=$$.tmp2
 
-echo "Unpacking $SERVER"
-mkdir $OUTPUT_TMP
-unzip -d $OUTPUT_TMP $SERVER
+$FERN -dgs=1 -hdc=0 -das=0 $SERVER $OUTPUT_TMP
 
-echo "Preparing classfiles with jadretro"
-java -jar $JADRETRO `find $OUTPUT_TMP -name '*.class' -print`
-
-echo "Decompiling with jad"
-mkdir $OUTPUT_TMP2
-$JAD -safe -ff -nonlb -dead -o -r -s .java -d $OUTPUT_TMP2 `find $OUTPUT_TMP -name '*.class' -print`
-rm -rf $OUTPUT_TMP
-
-echo "Applying patch to fix some decompilation issues"
-patch -d $OUTPUT_TMP2 -p1 < $PATCH
+unzip -d $OUTPUT_TMP $OUTPUT_TMP/`basename $SERVER`
+rm $OUTPUT_TMP/`basename $SERVER`
 
 echo "Reformatting source";
-$JACOBE -cfg=$JACOBECFG -nobackup -overwrite -outext=java $OUTPUT_TMP2/net/minecraft/server/*.java
+$JACOBE -cfg=$JACOBECFG -nobackup -overwrite -outext=java $OUTPUT_TMP/net/minecraft/server/*.java
 
 echo "Removing comments and excess newlines"
-perl -i -nlpe'BEGIN { $/ = undef }; s#^// .*\n##gm; s/\r//g; s/\n{2,}/\n\n/g; s/(^\n*|\n*$)//gs; s/\n\s+( implements )/$1/gs; s/(, )\n\s+/$1/gs; s/\(Object\) //g; s/(\})\n{2,}(\s*\})/$1\n$2/gs; s/(\})\n{2,}(\s*\})/$1\n$2/gs;' $OUTPUT_TMP2/net/minecraft/server/*.java
+perl -i -nlpe'BEGIN { $/ = undef }; s#^import net.minecraft.server.*?;$##gm; s#^\s*// .*\n#\n#gm; s/\r//g; s/\n{2,}/\n\n/g; s/(^\n*|\n*$)//gs; s/\n\s+( implements )/$1/gs; s/(, )\n\s+/$1/gs; s/\(Object\) //g; s/(\})\n{2,}(\s*\})/$1\n$2/gs; s/(\})\n{2,}(\s*\})/$1\n$2/gs;' $OUTPUT_TMP/net/minecraft/server/*.java
+
+echo "Renaming variables"
+for i in $OUTPUT_TMP/net/minecraft/server/*.java; do perl $BASEDIR/tools/var_rename.pl $i && mv $i.new $i; done
 
 echo "Creating source zip"
-pushd $OUTPUT_TMP2 > /dev/null
+pushd $OUTPUT_TMP > /dev/null
 if [[ -e $OUTPUT ]]; then rm -rf $OUTPUT; fi
 zip -r $OUTPUT * > /dev/null 2>&1
 popd > /dev/null
 
-rm -rf $OUTPUT_TMP2
+rm -rf $OUTPUT_TMP
 echo; echo "New decompiled minecraft_server.src.zip: $OUTPUT"
