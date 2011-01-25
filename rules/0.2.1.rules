@@ -37,7 +37,7 @@ rule bh ItemSword
 rule bi ItemBlock
 rule bj IChunkProvider
 rule bk EntitySpider
-rule bl SpawnerAnimals
+rule bl SpawnerCreature
 rule bm ThreadServerApplication
 rule bn ThreadCommandReader
 rule bo NBTTagByte
@@ -45,7 +45,7 @@ rule bp ThreadSleepForever
 rule bq StepSound
 rule br BlockLeaves
 rule bs TileEntityMobSpawner
-rule bt HashEntry2
+rule bt PlayerListEntry
 rule bu EntityPainting
 rule bv NextTickListEntry
 rule bw Explosion
@@ -106,7 +106,7 @@ rule dw IUpdatePlayerListBox
 rule dx BlockObsidian
 rule dy World
 rule dz IMobs
-rule ea EntityPlayerMP
+rule ea EntityPlayer
 rule eb WorldManager
 rule ec BlockWorkbench
 rule ed BlockGlass
@@ -117,7 +117,7 @@ rule eh BlockJukeBox
 rule ei BlockMushroom
 rule ej NetHandler
 rule ek EntitySkeleton
-rule el MCHashTable2
+rule el PlayerList
 rule em MapGenBase
 rule en Packet17AddToInventory
 rule eo ChunkLoader
@@ -135,7 +135,7 @@ rule ey BlockSand
 rule ez Item
 rule fa BlockSign
 rule fb NBTTagShort
-rule fc EntityPlayer
+rule fc EntityHuman
 rule fd MinecraftException
 rule fe Packet15Place
 rule ff Block
@@ -178,12 +178,12 @@ rule gn BlockFlower
 rule go ItemArmor
 rule gp ItemStack
 rule gq ItemSpade
-rule gr EntityList
+rule gr EntityTypes
 rule gs ChunkPosition
 rule gt NibbleArray
 rule gu EntityPig
 rule gv Packet24MobSpawn
-rule gw HashEntry
+rule gw EntityListEntry
 rule gx ConsoleLogFormatter
 rule gy BlockBreakable
 rule gz BlockGrass
@@ -192,7 +192,7 @@ rule hb TileEntityChest
 rule hc EntityFallingSand
 rule hd Packet14BlockDig
 rule he BlockFence
-rule hf MCHashTable
+rule hf EntityList
 rule hg PlayerManager
 rule hh Packet52MultiBlockChange
 rule hi EntityChicken
@@ -248,7 +248,7 @@ rule m BlockCrops
 rule n BlockIce
 rule o Packet18ArmAnimation
 rule p BlockLeavesBase
-rule q EntityZombieSimple
+rule q EntityGiantZombie
 rule r Packet5PlayerInventory
 rule s NBTTagCompound
 rule t ServerWindowAdapter

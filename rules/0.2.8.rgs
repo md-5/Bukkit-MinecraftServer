@@ -33,11 +33,6 @@
 !field net/minecraft/server/Block/K *
 !field net/minecraft/server/Block/L *
 !field net/minecraft/server/Block/M *
-!field net/minecraft/server/Block/N *
-!field net/minecraft/server/Block/O *
-!field net/minecraft/server/Block/P *
-!field net/minecraft/server/Block/Q *
-!field net/minecraft/server/Block/R *
 !field net/minecraft/server/Block/ab *
 !field net/minecraft/server/Block/ad *
 !field net/minecraft/server/Block/ae *
@@ -94,7 +89,6 @@
 !field net/minecraft/server/Block/bd *
 !field net/minecraft/server/Block/be *
 !field net/minecraft/server/Block/bf *
-!field net/minecraft/server/Block/bg *
 
 .field_map net/minecraft/server/Block/t STONE
 .field_map net/minecraft/server/Block/u GRASS
@@ -116,11 +110,6 @@
 .field_map net/minecraft/server/Block/K LEAVES
 .field_map net/minecraft/server/Block/L SPONGE
 .field_map net/minecraft/server/Block/M GLASS
-.field_map net/minecraft/server/Block/N LAPIS_ORE
-.field_map net/minecraft/server/Block/O LAPIS_BLOCK
-.field_map net/minecraft/server/Block/P DISPENSER
-.field_map net/minecraft/server/Block/Q SANDSTONE
-.field_map net/minecraft/server/Block/R NOTE_BLOCK
 .field_map net/minecraft/server/Block/ab WOOL
 .field_map net/minecraft/server/Block/ad YELLOW_FLOWER
 .field_map net/minecraft/server/Block/ae RED_ROSE
@@ -177,7 +166,6 @@
 .field_map net/minecraft/server/Block/bd GLOWSTONE
 .field_map net/minecraft/server/Block/be PORTAL
 .field_map net/minecraft/server/Block/bf JACK_O_LANTERN
-.field_map net/minecraft/server/Block/bg CAKE_BLOCK
 
 # Items
 
@@ -278,10 +266,6 @@
 !field net/minecraft/server/Item/aT *
 !field net/minecraft/server/Item/aU *
 !field net/minecraft/server/Item/aV *
-!field net/minecraft/server/Item/aW *
-!field net/minecraft/server/Item/aX *
-!field net/minecraft/server/Item/aY *
-!field net/minecraft/server/Item/aZ *
 
 .field_map net/minecraft/server/Item/d IRON_SPADE
 .field_map net/minecraft/server/Item/e IRON_PICKAXE
@@ -378,12 +362,8 @@
 .field_map net/minecraft/server/Item/aR GLOWSTONE_DUST
 .field_map net/minecraft/server/Item/aS RAW_FISH
 .field_map net/minecraft/server/Item/aT COOKED_FISH
-.field_map net/minecraft/server/Item/aU INK_SACK
-.field_map net/minecraft/server/Item/aV BONE
-.field_map net/minecraft/server/Item/aW SUGAR
-.field_map net/minecraft/server/Item/aX CAKE
-.field_map net/minecraft/server/Item/aY GOLD_RECORD
-.field_map net/minecraft/server/Item/aZ GREEN_RECORD
+.field_map net/minecraft/server/Item/aU GOLD_RECORD
+.field_map net/minecraft/server/Item/aV GREEN_RECORD
 
 # Biomes
 
@@ -413,20 +393,6 @@
 .field_map net/minecraft/server/BiomeBase/k TUNDRA
 .field_map net/minecraft/server/BiomeBase/l HELL
 
-# EnumToolMaterial
-
-!field net/minecraft/server/EnumToolMaterial/a *
-!field net/minecraft/server/EnumToolMaterial/b *
-!field net/minecraft/server/EnumToolMaterial/c *
-!field net/minecraft/server/EnumToolMaterial/d *
-!field net/minecraft/server/EnumToolMaterial/e *
-
-.field_map net/minecraft/server/EnumToolMaterial/a WOOD
-.field_map net/minecraft/server/EnumToolMaterial/b STONE
-.field_map net/minecraft/server/EnumToolMaterial/c IRON
-.field_map net/minecraft/server/EnumToolMaterial/d DIAMOND
-.field_map net/minecraft/server/EnumToolMaterial/e GOLD
-
 # EnumSkyBlock
 
 !field net/minecraft/server/EnumSkyBlock/a *
@@ -434,14 +400,6 @@
 
 .field_map net/minecraft/server/EnumSkyBlock/a SKY
 .field_map net/minecraft/server/EnumSkyBlock/b BLOCK
-
-# EnumMovingObjectType
-
-!field net/minecraft/server/EnumMovingObjectType/a *
-!field net/minecraft/server/EnumMovingObjectType/b *
-
-.field_map net/minecraft/server/EnumMovingObjectType/a TILE
-.field_map net/minecraft/server/EnumMovingObjectType/b ENTITY
 
 # EnumMobType
 

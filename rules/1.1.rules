@@ -1,4 +1,4 @@
-rule aa CraftingInventoryPlayerCB
+rule aa ContainerPlayer
 rule ab BlockSnowBlock
 rule ac ServerWindowAdapter
 rule ad NBTTagCompound
@@ -34,7 +34,7 @@ rule bf EntityAnimals
 rule bg TileEntity
 rule bh Packet9
 rule bi BlockLeaves
-rule bj CraftingInventoryFurnaceCB
+rule bj ContainerFurnace
 rule bk EntityGhast
 rule bl BlockMinecartTrack
 rule bm BlockRedstoneOre
@@ -49,7 +49,7 @@ rule bt WorldGenerator
 rule bu ItemSoup
 rule bv MapGenCavesHell
 rule bw IWorldAccess
-rule bx CraftingInventoryChestCB
+rule bx ContainerChest
 rule by NoiseGenerator2
 rule bz NBTTagInt
 rule ca EntityFireball
@@ -61,17 +61,16 @@ rule ce ItemSword
 rule cf ItemBlock
 rule cg IChunkProvider
 rule ch EntitySpider
-rule ci SpawnerAnimals
+rule ci SpawnerCreature
 rule cj ThreadServerApplication
 rule ck ChunkProviderHell
-rule CLASS NAME
 rule cl ThreadCommandReader
 rule cm NBTTagByte
 rule cn ThreadSleepForever
 rule co ItemFishingRod
 rule cp StepSound
 rule cq TileEntityMobSpawner
-rule cr HashEntry2
+rule cr PlayerListEntry
 rule cs Packet102
 rule ct EntityPainting
 rule cu BlockRedstoneTorch
@@ -103,7 +102,7 @@ rule ds EnumMobType
 rule dt PropertyManager
 rule du BlockContainer
 rule dv Packet29DestroyEntity
-rule dw CraftingInventoryCB
+rule dw Container
 rule dx NetworkAcceptThread
 rule dy BlockClay
 rule dz ItemSaddle
@@ -140,9 +139,9 @@ rule fc IUpdatePlayerListBox
 rule fd BlockPumpkin
 rule fe BlockObsidian
 rule ff World
-rule fg MobSpawnerSwamp
+rule fg BiomeSwamp
 rule fh IMobs
-rule fi EntityPlayerMP
+rule fi EntityPlayer
 rule fj WorldManager
 rule fk BlockWorkbench
 rule fl BlockGlass
@@ -155,8 +154,8 @@ rule fq FontAllowedCharacters
 rule fr BlockMushroom
 rule fs NetHandler
 rule ft EntitySkeleton
-rule fu MobSpawnerDesert
-rule fv MCHashTable2
+rule fu BiomeDesert
+rule fv PlayerList
 rule fw MapGenBase
 rule fx Pathfinder
 rule fy ChunkLoader
@@ -178,7 +177,7 @@ rule gm Item
 rule gn Packet130
 rule go BlockSign
 rule gp Slot
-rule gq EntityPlayer
+rule gq EntityHuman
 rule gr NBTTagShort
 rule gs MinecraftException
 rule gt Packet15Place
@@ -221,7 +220,7 @@ rule ic MathHelper
 rule id EntityEgg
 rule ie EnumArt
 rule if WorldGenReed
-rule ig CraftingInventoryWorkbenchCB
+rule ig ContainerWorkbench
 rule ih Packet100
 rule ii InventoryPlayer
 rule i InventoryCrafting
@@ -229,7 +228,7 @@ rule ij ItemArmor
 rule ik BlockFlower
 rule il ItemStack
 rule im ItemSpade
-rule in EntityList
+rule in EntityTypes
 rule io Packet38
 rule ip WorldProviderHell
 rule iq ChunkPosition
@@ -237,7 +236,7 @@ rule ir EntityPig
 rule is NibbleArray
 rule it InventoryCraftResult
 rule iu Packet24MobSpawn
-rule iv HashEntry
+rule iv EntityListEntry
 rule iw ConsoleLogFormatter
 rule ix BlockBreakable
 rule iy BlockGrass
@@ -247,7 +246,7 @@ rule jb TileEntityChest
 rule jc EntityFallingSand
 rule jd Packet14BlockDig
 rule je BlockFence
-rule jf MCHashTable
+rule jf EntityList
 rule jg RecipesCrafting
 rule jh PlayerManager
 rule ji EntityChicken
@@ -258,7 +257,7 @@ rule jm WorldProvider
 rule jn RecipesWeapons
 rule jo NBTTagString
 rule jp BlockSponge
-rule jq MobSpawnerBase
+rule jq BiomeBase
 rule jr NetworkMasterThread
 rule js ThreadMonitorConnection
 rule jt NetworkReaderThread
@@ -304,7 +303,7 @@ rule le ItemReed
 rule lf MaterialTransparent
 rule lg IInventory
 rule lh ItemFood
-rule li SlotCrafting
+rule li SlotResult
 rule lj EntityFish
 rule lk ChunkCoordIntPair
 rule ll BlockLightStone
@@ -318,9 +317,9 @@ rule q NBTTagFloat
 rule r Packet5PlayerInventory
 rule s BlockCrops
 rule t BlockIce
-rule u MobSpawnerHell
+rule u BiomeHell
 rule v Packet18ArmAnimation
 rule w BlockLeavesBase
 rule x Packet39
 rule y RecipesArmor
-rule z EntityZombieSimple
+rule z EntityGiantZombie

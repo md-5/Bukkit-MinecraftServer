@@ -13,8 +13,6 @@ RULES=$BASEDIR/rules/latest.rules
 RETRO_CONFIG=$BASEDIR/rules/latest.rgs
 NAMESPACE_RULES=$BASEDIR/rules/namespace.rules
 
-
-
 if [[ $# -ge 1 ]]; then
     SERVER=$1
     echo "Custom server: $SERVER"
@@ -23,9 +21,13 @@ if [[ $# -ge 1 ]]; then
         echo "Custom server: $SERVER"
     else
         # Dynamicly find the server version
-        RULES=$BASEDIR/rules/`unzip -p $SERVER net/minecraft/server/MinecraftServer.class | strings | grep 'server version' | sed -e 's/^[^0-9]*//' -e 's/_.*//'`.rules
+        VERSION=`unzip -p $SERVER net/minecraft/server/MinecraftServer.class | strings | grep 'server version'`;
+        RULES=$BASEDIR/rules/`echo $VERSION | sed -e 's/^[^0-9]*//' -e 's/_.*//'`.rules
         echo "Extracted rules: $RULES"
-        RETRO_CONFIG=$BASEDIR/rules/`unzip -p $SERVER net/minecraft/server/MinecraftServer.class | strings | grep 'server version' | sed -e 's/^[^0-9]*//' -e 's/_.*//'`.rgs
+        RETRO_CONFIG=$BASEDIR/rules/`echo $VERSION | sed -e 's/^[^0-9]*//'`.rgs
+        if [[ ! -e $RETRO_CONFIG ]]; then
+            RETRO_CONFIG=$BASEDIR/rules/`echo $VERSION | sed -e 's/^[^0-9]*//' -e 's/_.*//'`.rgs
+        fi
         echo "Extracted rules: $RETRO_CONFIG"
     fi
 else
@@ -63,6 +65,7 @@ rm $OUTPUT_TMP
 echo "Renaming constants using retroguard"
 $RETROGUARD $OUTPUT_TMP2 $OUTPUT $RETRO_CONFIG retro.log
 
-rm retro.log $OUTPUT_TMP2
+rm retro.log
+rm $OUTPUT_TMP2
 
 echo "New modified minecraft_server.jar: $OUTPUT"

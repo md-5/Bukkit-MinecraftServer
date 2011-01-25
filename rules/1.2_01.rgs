@@ -489,6 +489,7 @@
 !field net/minecraft/server/EnumArt/v *
 !field net/minecraft/server/EnumArt/w *
 !field net/minecraft/server/EnumArt/x *
+!field net/minecraft/server/EnumArt/y *
 
 .field_map net/minecraft/server/EnumArt/a KEBAB
 .field_map net/minecraft/server/EnumArt/b AZTEC
@@ -514,3 +515,4 @@
 .field_map net/minecraft/server/EnumArt/v PIGSCENE
 .field_map net/minecraft/server/EnumArt/w BURNINGSKULL
 .field_map net/minecraft/server/EnumArt/x SKELETON
+.field_map net/minecraft/server/EnumArt/y DONKEYKONG

@@ -47,7 +47,7 @@ rule br ItemSword
 rule bs ItemBlock
 rule bt IChunkProvider
 rule bu EntitySpider
-rule bv SpawnerAnimals
+rule bv SpawnerCreature
 rule bw ThreadServerApplication
 rule bx ChunkProviderHell
 rule by ThreadCommandReader
@@ -58,7 +58,7 @@ rule c BlockChest
 rule cc StepSound
 rule cd BlockLeaves
 rule ce TileEntityMobSpawner
-rule cf HashEntry2
+rule cf PlayerListEntry
 rule cg EntityPainting
 rule ch Explosion
 rule ci EntityTNTPrimed
@@ -121,8 +121,8 @@ rule el BlockObsidian
 rule em World
 rule e NBTTagLong
 rule en IMobs
-rule eo MobSpawnerSwamp
-rule ep EntityPlayerMP
+rule eo BiomeSwamp
+rule ep EntityPlayer
 rule eq WorldManager
 rule er BlockWorkbench
 rule es BlockGlass
@@ -133,8 +133,8 @@ rule ew BlockJukeBox
 rule ex BlockMushroom
 rule ey NetHandler
 rule ez EntitySkeleton
-rule fa MobSpawnerDesert
-rule fb MCHashTable2
+rule fa BiomeDesert
+rule fb PlayerList
 rule fc MapGenBase
 rule fd Packet17AddToInventory
 rule fe Pathfinder
@@ -155,7 +155,7 @@ rule fr BlockSand
 rule fs Item
 rule ft BlockSign
 rule fu NBTTagShort
-rule fv EntityPlayer
+rule fv EntityHuman
 rule fw MinecraftException
 rule fx Packet15Place
 rule fy Block
@@ -199,13 +199,13 @@ rule hh ItemArmor
 rule hi BlockFlower
 rule hj ItemStack
 rule hk ItemSpade
-rule hl EntityList
+rule hl EntityTypes
 rule hm WorldProviderHell
 rule hn ChunkPosition
 rule ho NibbleArray
 rule hp EntityPig
 rule hq Packet24MobSpawn
-rule hr HashEntry
+rule hr EntityListEntry
 rule hs ConsoleLogFormatter
 rule ht BlockBreakable
 rule hu BlockGrass
@@ -215,7 +215,7 @@ rule hx TileEntityChest
 rule hy EntityFallingSand
 rule hz Packet14BlockDig
 rule ia BlockFence
-rule ib MCHashTable
+rule ib EntityList
 rule ic PlayerManager
 rule id WorldGenPumpkin
 rule ie Packet52MultiBlockChange
@@ -223,7 +223,7 @@ rule if EntityChicken
 rule ig WorldProvider
 rule ih NBTTagString
 rule ii BlockSponge
-rule ij MobSpawnerBase
+rule ij BiomeBase
 rule ik NetworkMasterThread
 rule il ThreadMonitorConnection
 rule im NetworkReaderThread
@@ -278,11 +278,11 @@ rule l Packet21PickupSpawn
 rule m NBTTagFloat
 rule n BlockCrops
 rule o BlockIce
-rule p MobSpawnerHell
+rule p BiomeHell
 rule q Packet18ArmAnimation
 rule r BlockLeavesBase
 rule s Packet39
-rule t EntityZombieSimple
+rule t EntityGiantZombie
 rule u Packet5PlayerInventory
 rule v NBTTagCompound
 rule w ServerWindowAdapter

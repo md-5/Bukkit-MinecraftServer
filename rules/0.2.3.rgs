@@ -13,7 +13,6 @@
 
 # Blocks
 
-!field net/minecraft/server/Block/t *
 !field net/minecraft/server/Block/u *
 !field net/minecraft/server/Block/v *
 !field net/minecraft/server/Block/w *
@@ -34,12 +33,7 @@
 !field net/minecraft/server/Block/L *
 !field net/minecraft/server/Block/M *
 !field net/minecraft/server/Block/N *
-!field net/minecraft/server/Block/O *
-!field net/minecraft/server/Block/P *
-!field net/minecraft/server/Block/Q *
-!field net/minecraft/server/Block/R *
-!field net/minecraft/server/Block/ab *
-!field net/minecraft/server/Block/ad *
+!field net/minecraft/server/Block/ac *
 !field net/minecraft/server/Block/ae *
 !field net/minecraft/server/Block/af *
 !field net/minecraft/server/Block/ag *
@@ -96,88 +90,82 @@
 !field net/minecraft/server/Block/bf *
 !field net/minecraft/server/Block/bg *
 
-.field_map net/minecraft/server/Block/t STONE
-.field_map net/minecraft/server/Block/u GRASS
-.field_map net/minecraft/server/Block/v DIRT
-.field_map net/minecraft/server/Block/w COBBLESTONE
-.field_map net/minecraft/server/Block/x WOOD
-.field_map net/minecraft/server/Block/y SAPLING
-.field_map net/minecraft/server/Block/z BEDROCK
-.field_map net/minecraft/server/Block/A WATER
-.field_map net/minecraft/server/Block/B STATIONARY_WATER
-.field_map net/minecraft/server/Block/C LAVA
-.field_map net/minecraft/server/Block/D STATIONARY_LAVA
-.field_map net/minecraft/server/Block/E SAND
-.field_map net/minecraft/server/Block/F GRAVEL
-.field_map net/minecraft/server/Block/G GOLD_ORE
-.field_map net/minecraft/server/Block/H IRON_ORE
-.field_map net/minecraft/server/Block/I COAL_ORE
-.field_map net/minecraft/server/Block/J LOG
-.field_map net/minecraft/server/Block/K LEAVES
-.field_map net/minecraft/server/Block/L SPONGE
-.field_map net/minecraft/server/Block/M GLASS
-.field_map net/minecraft/server/Block/N LAPIS_ORE
-.field_map net/minecraft/server/Block/O LAPIS_BLOCK
-.field_map net/minecraft/server/Block/P DISPENSER
-.field_map net/minecraft/server/Block/Q SANDSTONE
-.field_map net/minecraft/server/Block/R NOTE_BLOCK
-.field_map net/minecraft/server/Block/ab WOOL
-.field_map net/minecraft/server/Block/ad YELLOW_FLOWER
-.field_map net/minecraft/server/Block/ae RED_ROSE
-.field_map net/minecraft/server/Block/af BROWN_MUSHROOM
-.field_map net/minecraft/server/Block/ag RED_MUSHROOM
-.field_map net/minecraft/server/Block/ah GOLD_BLOCK
-.field_map net/minecraft/server/Block/ai IRON_BLOCK
-.field_map net/minecraft/server/Block/aj DOUBLE_STEP
-.field_map net/minecraft/server/Block/ak STEP
-.field_map net/minecraft/server/Block/al BRICK
-.field_map net/minecraft/server/Block/am TNT
-.field_map net/minecraft/server/Block/an BOOKSHELF
-.field_map net/minecraft/server/Block/ao MOSSY_COBBLESTONE
-.field_map net/minecraft/server/Block/ap OBSIDIAN
-.field_map net/minecraft/server/Block/aq TORCH
-.field_map net/minecraft/server/Block/ar FIRE
-.field_map net/minecraft/server/Block/as MOB_SPAWNER
-.field_map net/minecraft/server/Block/at WOOD_STAIRS
-.field_map net/minecraft/server/Block/au CHEST
-.field_map net/minecraft/server/Block/av REDSTONE_WIRE
-.field_map net/minecraft/server/Block/aw DIAMOND_ORE
-.field_map net/minecraft/server/Block/ax DIAMOND_BLOCK
-.field_map net/minecraft/server/Block/ay WORKBENCH
-.field_map net/minecraft/server/Block/az CROPS
-.field_map net/minecraft/server/Block/aA SOIL
-.field_map net/minecraft/server/Block/aB FURNACE
-.field_map net/minecraft/server/Block/aC BURNING_FURNACE
-.field_map net/minecraft/server/Block/aD SIGN_POST
-.field_map net/minecraft/server/Block/aE WOODEN_DOOR
-.field_map net/minecraft/server/Block/aF LADDER
-.field_map net/minecraft/server/Block/aG RAILS
-.field_map net/minecraft/server/Block/aH COBBLESTONE_STAIRS
-.field_map net/minecraft/server/Block/aI WALL_SIGN
-.field_map net/minecraft/server/Block/aJ LEVER
-.field_map net/minecraft/server/Block/aK STONE_PLATE
-.field_map net/minecraft/server/Block/aL IRON_DOOR_BLOCK
-.field_map net/minecraft/server/Block/aM WOOD_PLATE
-.field_map net/minecraft/server/Block/aN REDSTONE_ORE
-.field_map net/minecraft/server/Block/aO GLOWING_REDSTONE_ORE
-.field_map net/minecraft/server/Block/aP REDSTONE_TORCH_OFF
-.field_map net/minecraft/server/Block/aQ REDSTONE_TORCH_ON
-.field_map net/minecraft/server/Block/aR STONE_BUTTON
-.field_map net/minecraft/server/Block/aS SNOW
-.field_map net/minecraft/server/Block/aT ICE
-.field_map net/minecraft/server/Block/aU SNOW_BLOCK
-.field_map net/minecraft/server/Block/aV CACTUS
-.field_map net/minecraft/server/Block/aW CLAY
-.field_map net/minecraft/server/Block/aX SUGAR_CANE_BLOCK
-.field_map net/minecraft/server/Block/aY JUKEBOX
-.field_map net/minecraft/server/Block/aZ FENCE
-.field_map net/minecraft/server/Block/ba PUMPKIN
-.field_map net/minecraft/server/Block/bb NETHERRACK
-.field_map net/minecraft/server/Block/bc SOUL_SAND
-.field_map net/minecraft/server/Block/bd GLOWSTONE
-.field_map net/minecraft/server/Block/be PORTAL
-.field_map net/minecraft/server/Block/bf JACK_O_LANTERN
-.field_map net/minecraft/server/Block/bg CAKE_BLOCK
+.field_map net/minecraft/server/Block/u STONE
+.field_map net/minecraft/server/Block/v GRASS
+.field_map net/minecraft/server/Block/w DIRT
+.field_map net/minecraft/server/Block/x COBBLESTONE
+.field_map net/minecraft/server/Block/y WOOD
+.field_map net/minecraft/server/Block/z SAPLING
+.field_map net/minecraft/server/Block/A BEDROCK
+.field_map net/minecraft/server/Block/B WATER
+.field_map net/minecraft/server/Block/C STATIONARY_WATER
+.field_map net/minecraft/server/Block/D LAVA
+.field_map net/minecraft/server/Block/E STATIONARY_LAVA
+.field_map net/minecraft/server/Block/F SAND
+.field_map net/minecraft/server/Block/G GRAVEL
+.field_map net/minecraft/server/Block/H GOLD_ORE
+.field_map net/minecraft/server/Block/I IRON_ORE
+.field_map net/minecraft/server/Block/J COAL_ORE
+.field_map net/minecraft/server/Block/K LOG
+.field_map net/minecraft/server/Block/L LEAVES
+.field_map net/minecraft/server/Block/M SPONGE
+.field_map net/minecraft/server/Block/N GLASS
+.field_map net/minecraft/server/Block/ac WOOL
+.field_map net/minecraft/server/Block/ae YELLOW_FLOWER
+.field_map net/minecraft/server/Block/af RED_ROSE
+.field_map net/minecraft/server/Block/ag BROWN_MUSHROOM
+.field_map net/minecraft/server/Block/ah RED_MUSHROOM
+.field_map net/minecraft/server/Block/ai GOLD_BLOCK
+.field_map net/minecraft/server/Block/aj IRON_BLOCK
+.field_map net/minecraft/server/Block/ak DOUBLE_STEP
+.field_map net/minecraft/server/Block/al STEP
+.field_map net/minecraft/server/Block/am BRICK
+.field_map net/minecraft/server/Block/an TNT
+.field_map net/minecraft/server/Block/ao BOOKSHELF
+.field_map net/minecraft/server/Block/ap MOSSY_COBBLESTONE
+.field_map net/minecraft/server/Block/aq OBSIDIAN
+.field_map net/minecraft/server/Block/ar TORCH
+.field_map net/minecraft/server/Block/as FIRE
+.field_map net/minecraft/server/Block/at MOB_SPAWNER
+.field_map net/minecraft/server/Block/au WOOD_STAIRS
+.field_map net/minecraft/server/Block/av CHEST
+.field_map net/minecraft/server/Block/aw REDSTONE_WIRE
+.field_map net/minecraft/server/Block/ax DIAMOND_ORE
+.field_map net/minecraft/server/Block/ay DIAMOND_BLOCK
+.field_map net/minecraft/server/Block/az WORKBENCH
+.field_map net/minecraft/server/Block/aA CROPS
+.field_map net/minecraft/server/Block/aB SOIL
+.field_map net/minecraft/server/Block/aC FURNACE
+.field_map net/minecraft/server/Block/aD BURNING_FURNACE
+.field_map net/minecraft/server/Block/aE SIGN_POST
+.field_map net/minecraft/server/Block/aF WOODEN_DOOR
+.field_map net/minecraft/server/Block/aG LADDER
+.field_map net/minecraft/server/Block/aH RAILS
+.field_map net/minecraft/server/Block/aI COBBLESTONE_STAIRS
+.field_map net/minecraft/server/Block/aJ WALL_SIGN
+.field_map net/minecraft/server/Block/aK LEVER
+.field_map net/minecraft/server/Block/aL STONE_PLATE
+.field_map net/minecraft/server/Block/aM IRON_DOOR_BLOCK
+.field_map net/minecraft/server/Block/aN WOOD_PLATE
+.field_map net/minecraft/server/Block/aO REDSTONE_ORE
+.field_map net/minecraft/server/Block/aP GLOWING_REDSTONE_ORE
+.field_map net/minecraft/server/Block/aQ REDSTONE_TORCH_OFF
+.field_map net/minecraft/server/Block/aR REDSTONE_TORCH_ON
+.field_map net/minecraft/server/Block/aS STONE_BUTTON
+.field_map net/minecraft/server/Block/aT SNOW
+.field_map net/minecraft/server/Block/aU ICE
+.field_map net/minecraft/server/Block/aV SNOW_BLOCK
+.field_map net/minecraft/server/Block/aW CACTUS
+.field_map net/minecraft/server/Block/aX CLAY
+.field_map net/minecraft/server/Block/aY SUGAR_CANE_BLOCK
+.field_map net/minecraft/server/Block/aZ JUKEBOX
+.field_map net/minecraft/server/Block/ba FENCE
+.field_map net/minecraft/server/Block/bb PUMPKIN
+.field_map net/minecraft/server/Block/bc NETHERRACK
+.field_map net/minecraft/server/Block/bd SOUL_SAND
+.field_map net/minecraft/server/Block/be GLOWSTONE
+.field_map net/minecraft/server/Block/bf PORTAL
+.field_map net/minecraft/server/Block/bg JACK_O_LANTERN
 
 # Items
 
@@ -278,10 +266,6 @@
 !field net/minecraft/server/Item/aT *
 !field net/minecraft/server/Item/aU *
 !field net/minecraft/server/Item/aV *
-!field net/minecraft/server/Item/aW *
-!field net/minecraft/server/Item/aX *
-!field net/minecraft/server/Item/aY *
-!field net/minecraft/server/Item/aZ *
 
 .field_map net/minecraft/server/Item/d IRON_SPADE
 .field_map net/minecraft/server/Item/e IRON_PICKAXE
@@ -378,12 +362,8 @@
 .field_map net/minecraft/server/Item/aR GLOWSTONE_DUST
 .field_map net/minecraft/server/Item/aS RAW_FISH
 .field_map net/minecraft/server/Item/aT COOKED_FISH
-.field_map net/minecraft/server/Item/aU INK_SACK
-.field_map net/minecraft/server/Item/aV BONE
-.field_map net/minecraft/server/Item/aW SUGAR
-.field_map net/minecraft/server/Item/aX CAKE
-.field_map net/minecraft/server/Item/aY GOLD_RECORD
-.field_map net/minecraft/server/Item/aZ GREEN_RECORD
+.field_map net/minecraft/server/Item/aU GOLD_RECORD
+.field_map net/minecraft/server/Item/aV GREEN_RECORD
 
 # Biomes
 
@@ -413,20 +393,6 @@
 .field_map net/minecraft/server/BiomeBase/k TUNDRA
 .field_map net/minecraft/server/BiomeBase/l HELL
 
-# EnumToolMaterial
-
-!field net/minecraft/server/EnumToolMaterial/a *
-!field net/minecraft/server/EnumToolMaterial/b *
-!field net/minecraft/server/EnumToolMaterial/c *
-!field net/minecraft/server/EnumToolMaterial/d *
-!field net/minecraft/server/EnumToolMaterial/e *
-
-.field_map net/minecraft/server/EnumToolMaterial/a WOOD
-.field_map net/minecraft/server/EnumToolMaterial/b STONE
-.field_map net/minecraft/server/EnumToolMaterial/c IRON
-.field_map net/minecraft/server/EnumToolMaterial/d DIAMOND
-.field_map net/minecraft/server/EnumToolMaterial/e GOLD
-
 # EnumSkyBlock
 
 !field net/minecraft/server/EnumSkyBlock/a *
@@ -434,14 +400,6 @@
 
 .field_map net/minecraft/server/EnumSkyBlock/a SKY
 .field_map net/minecraft/server/EnumSkyBlock/b BLOCK
-
-# EnumMovingObjectType
-
-!field net/minecraft/server/EnumMovingObjectType/a *
-!field net/minecraft/server/EnumMovingObjectType/b *
-
-.field_map net/minecraft/server/EnumMovingObjectType/a TILE
-.field_map net/minecraft/server/EnumMovingObjectType/b ENTITY
 
 # EnumMobType
 
