@@ -14,7 +14,7 @@ rule am BlockSlowSand
 rule an Packet1Login
 rule ao Packet11PlayerPosition
 rule a Packet7UseEntity
-rule ap IAnimals
+rule ap IAnimal
 rule aq StepSoundSand
 rule ar StepSoundStone
 rule as BlockPortal
@@ -22,7 +22,7 @@ rule at PlayerInstance
 rule au RecipesFood
 rule av NoiseGeneratorPerlin
 rule aw MaterialLogic
-rule ax EntityWaterMob
+rule ax EntityWaterAnimal
 rule ay InventoryLargeChest
 rule az CompressedStreamTools
 rule ba ServerCommand
@@ -36,7 +36,7 @@ rule bh ItemBucket
 rule bi BlockDirt
 rule bj IChunkLoader
 rule bk WorldGenFlowers
-rule bl EntityAnimals
+rule bl EntityAnimal
 rule bm TileEntity
 rule bn ItemCloth
 rule bo Packet9Respawn
@@ -157,7 +157,7 @@ rule ft BlockPumpkin
 rule fu BlockObsidian
 rule fv World
 rule fw BiomeSwamp
-rule fx IMobs
+rule fx IMonster
 rule fy EntityPlayer
 rule fz WorldManager
 rule ga BlockWorkbench
@@ -205,7 +205,7 @@ rule hn BlockCake
 rule ho MinecraftException
 rule h Packet101CloseWindow
 rule hp Packet15Place
-rule hq EntityMobs
+rule hq EntityMonster
 rule hr Block
 rule hs RecipesTools
 rule ht EntitySlime

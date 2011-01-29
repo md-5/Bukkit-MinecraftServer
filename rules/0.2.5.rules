@@ -3,7 +3,7 @@ rule ab BlockTNT
 rule ac BlockSlowSand
 rule ad Packet1Login
 rule ae Packet11PlayerPosition
-rule af IAnimals
+rule af IAnimal
 rule ag StepSoundSand
 rule ah StepSoundStone
 rule ai BlockPortal
@@ -22,7 +22,7 @@ rule at BlockDirt
 rule au ItemBucket
 rule av IChunkLoader
 rule aw WorldGenFlowers
-rule ax EntityAnimals
+rule ax EntityAnimal
 rule ay TileEntity
 rule az Packet9
 rule ba EntityGhast
@@ -122,7 +122,7 @@ rule em BlockPumpkin
 rule en BlockObsidian
 rule e NBTTagLong
 rule eo World
-rule ep IMobs
+rule ep IMonster
 rule eq BiomeSwamp
 rule er EntityPlayer
 rule es WorldManager
@@ -161,7 +161,7 @@ rule fx EntityHuman
 rule fy MinecraftException
 rule fz Packet15Place
 rule ga Block
-rule gb EntityMobs
+rule gb EntityMonster
 rule gc BlockBookshelf
 rule gd EntitySlime
 rule ge WorldChunkManagerHell

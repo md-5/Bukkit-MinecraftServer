@@ -9,13 +9,13 @@ sub new {
     my $Class = shift;
     my $self = {
         last => {
-            byte        => [1, 1, qw|b|],
-            char        => [1, 1, qw|c|],
+            byte        => [0, 0, qw|b|],
+            char        => [0, 0, qw|c|],
             short       => [1, 0, qw|short|],
             int         => [0, 1, qw|i j k l|],
             boolean     => [0, 1, qw|flag|],
-            double      => [1, 1, qw|d|],
-            float       => [1, 1, qw|f|],
+            double      => [0, 0, qw|d|],
+            float       => [0, 1, qw|f|],
             File        => [1, 1, qw|file|],
             String      => [0, 1, qw|s|],
             Class       => [0, 1, qw|oclass|],

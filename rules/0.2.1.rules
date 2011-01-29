@@ -1,5 +1,5 @@
 rule aa Packet11PlayerPosition
-rule ab IAnimals
+rule ab IAnimal
 rule ac StepSoundSand
 rule ad StepSoundStone
 rule ae PlayerInstance
@@ -18,7 +18,7 @@ rule ap ItemBucket
 rule aq IChunkLoader
 rule ar WorldGenFlowers
 rule as TileEntity
-rule at EntityAnimals
+rule at EntityAnimal
 rule au BlockRedstoneOre
 rule av BlockMinecartTrack
 rule aw Vec3D
@@ -105,7 +105,7 @@ rule dv BlockFurnace
 rule dw IUpdatePlayerListBox
 rule dx BlockObsidian
 rule dy World
-rule dz IMobs
+rule dz IMonster
 rule ea EntityPlayer
 rule eb WorldManager
 rule ec BlockWorkbench
@@ -139,7 +139,7 @@ rule fc EntityHuman
 rule fd MinecraftException
 rule fe Packet15Place
 rule ff Block
-rule fg EntityMobs
+rule fg EntityMonster
 rule fh EntitySlime
 rule fi BlockBookshelf
 rule fj BlockSapling
