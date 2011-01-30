@@ -747,52 +747,39 @@
 .field_map net/minecraft/server/Material/y CAKE
 .field_map net/minecraft/server/Material/z canBurn
 
-!method net/minecraft/server/Material/a *
-!method net/minecraft/server/Material/b *
-!method net/minecraft/server/Material/c *
-!method net/minecraft/server/Material/d *
-!method net/minecraft/server/Material/e *
+# Material + overloads
+
+!method net/minecraft/server/Material/a ()Z
+!method net/minecraft/server/Material/b ()Z
+!method net/minecraft/server/Material/c ()Z
+!method net/minecraft/server/Material/d ()Z
+!method net/minecraft/server/Material/e ()Z
+!method net/minecraft/server/MaterialLiquid/a ()Z
+!method net/minecraft/server/MaterialLiquid/c ()Z
+!method net/minecraft/server/MaterialLiquid/d ()Z
+!method net/minecraft/server/MaterialLogic/a ()Z
+!method net/minecraft/server/MaterialLogic/b ()Z
+!method net/minecraft/server/MaterialLogic/c ()Z
+!method net/minecraft/server/MaterialTransparent/a ()Z
+!method net/minecraft/server/MaterialTransparent/b ()Z
+!method net/minecraft/server/MaterialTransparent/c ()Z
 
 .method_map net/minecraft/server/Material/a ()Z isBuildable
 .method_map net/minecraft/server/Material/b ()Z blocksLight
 .method_map net/minecraft/server/Material/c ()Z isSolid
 .method_map net/minecraft/server/Material/d ()Z isLiquid
 .method_map net/minecraft/server/Material/e ()Z isBurnable
+.method_map net/minecraft/server/MaterialLiquid/a ()Z isBuildable
+.method_map net/minecraft/server/MaterialLiquid/c ()Z isSolid
+.method_map net/minecraft/server/MaterialLiquid/d ()Z isLiquid
+.method_map net/minecraft/server/MaterialLogic/a ()Z isBuildable
+.method_map net/minecraft/server/MaterialLogic/b ()Z blocksLight
+.method_map net/minecraft/server/MaterialLogic/c ()Z isSolid
+.method_map net/minecraft/server/MaterialTransparent/a ()Z isBuildable
+.method_map net/minecraft/server/MaterialTransparent/b ()Z blocksLight
+.method_map net/minecraft/server/MaterialTransparent/c ()Z isSolid
 
 # World
-
-!method net/minecraft/server/IBlockAccess/a (III)I
-!method net/minecraft/server/IBlockAccess/b (III)I
-!method net/minecraft/server/IBlockAccess/c (III)Lnet/minecraft/server/Material;
-
-.method_map net/minecraft/server/IBlockAccess/a (III)I getTypeId
-.method_map net/minecraft/server/IBlockAccess/b (III)I getData
-.method_map net/minecraft/server/IBlockAccess/c (III)Lnet/minecraft/server/Material; getMaterial
-
-
-!method net/minecraft/server/ChunkCache/a (III)I
-!method net/minecraft/server/ChunkCache/b (III)I
-!method net/minecraft/server/ChunkCache/c (III)Lnet/minecraft/server/Material;
-
-.method_map net/minecraft/server/ChunkCache/a (III)I getTypeId
-.method_map net/minecraft/server/ChunkCache/b (III)I getData
-.method_map net/minecraft/server/ChunkCache/c (III)Lnet/minecraft/server/Material; getMaterial
-
-!method net/minecraft/server/WorldServer/a (III)I
-!method net/minecraft/server/WorldServer/b (III)I
-!method net/minecraft/server/WorldServer/c (III)Lnet/minecraft/server/Material;
-
-.method_map net/minecraft/server/WorldServer/a (III)I getTypeId
-.method_map net/minecraft/server/WorldServer/b (III)I getData
-.method_map net/minecraft/server/WorldServer/c (III)Lnet/minecraft/server/Material; getMaterial
-
-!method net/minecraft/server/World/a (III)I
-!method net/minecraft/server/World/b (III)I
-!method net/minecraft/server/World/c (III)Lnet/minecraft/server/Material;
-
-.method_map net/minecraft/server/World/a (III)I getTypeId
-.method_map net/minecraft/server/World/b (III)I getData
-.method_map net/minecraft/server/World/c (III)Lnet/minecraft/server/Material; getMaterial
 
 !field net/minecraft/server/World/m *
 !field net/minecraft/server/World/n *
@@ -816,3 +803,28 @@
 .method_map net/minecraft/server/World/m (III)Lnet/minecraft/server/TileEntity; getTileEntity
 .method_map net/minecraft/server/World/a (IIILnet/minecraft/server/TileEntity;)V setTileEntity
 
+# IBlockAccess implementation
+
+!method net/minecraft/server/IBlockAccess/a (III)I
+!method net/minecraft/server/IBlockAccess/b (III)I
+!method net/minecraft/server/IBlockAccess/c (III)Lnet/minecraft/server/Material;
+!method net/minecraft/server/ChunkCache/a (III)I
+!method net/minecraft/server/ChunkCache/b (III)I
+!method net/minecraft/server/ChunkCache/c (III)Lnet/minecraft/server/Material;
+!method net/minecraft/server/World/a (III)I
+!method net/minecraft/server/World/b (III)I
+!method net/minecraft/server/World/c (III)Lnet/minecraft/server/Material;
+!method net/minecraft/server/WorldServer/a (III)I
+!method net/minecraft/server/WorldServer/b (III)I
+
+.method_map net/minecraft/server/IBlockAccess/a (III)I getTypeId
+.method_map net/minecraft/server/IBlockAccess/b (III)I getData
+.method_map net/minecraft/server/IBlockAccess/c (III)Lnet/minecraft/server/Material; getMaterial
+.method_map net/minecraft/server/ChunkCache/a (III)I getTypeId
+.method_map net/minecraft/server/ChunkCache/b (III)I getData
+.method_map net/minecraft/server/ChunkCache/c (III)Lnet/minecraft/server/Material; getMaterial
+.method_map net/minecraft/server/World/a (III)I getTypeId
+.method_map net/minecraft/server/World/b (III)I getData
+.method_map net/minecraft/server/World/c (III)Lnet/minecraft/server/Material; getMaterial
+.method_map net/minecraft/server/WorldServer/b (III)I getData
+.method_map net/minecraft/server/WorldServer/c (III)Lnet/minecraft/server/Material; getMaterial
