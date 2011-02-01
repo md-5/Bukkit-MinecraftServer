@@ -29,6 +29,6 @@ $BASEDIR/server/minecraft_server.1.2_01.jar ;\
 do \
     V=`echo $server | sed -e 's/^[^0-9]*//' -e 's/[.][^.]*$//'`; \
     bin/rename.sh $server; bin/decompile.sh; \
-    pushd $REPO; git rm -rf *; unzip $BASEDIR/minecraft_server.src.zip; git add .; git commit -m$V; popd; \
+    pushd $REPO; git rm -rf *; unzip $BASEDIR/minecraft_server.src.zip; cp $BASEDIR/devbin/README.copyright README.md; git add .; git commit -m$V; popd; \
     #read -sn 1 -p "Press any key to continue..."
 done;
