@@ -1,0 +1,846 @@
+# This would be a null.rgs
+.class ** protected
+.method;private ** *
+.field;private ** *
+.attribute SourceFile
+.attribute LocalVariableTable
+.attribute LineNumberTable
+.attribute Deprecated
+.attribute Signature
+.attribute LocalVariableTypeTable
+.attribute EnclosingMethod
+.option Annotations
+
+# Blocks
+
+!field net/minecraft/server/Block/bj *
+!field net/minecraft/server/Block/bk *
+!field net/minecraft/server/Block/bl *
+!field net/minecraft/server/Block/bm *
+!field net/minecraft/server/Block/bn *
+!field net/minecraft/server/Block/bo *
+!field net/minecraft/server/Block/bp *
+!field net/minecraft/server/Block/bq *
+!field net/minecraft/server/Block/br *
+!field net/minecraft/server/Block/bs *
+!field net/minecraft/server/Block/bt *
+!field net/minecraft/server/Block/bv *
+!field net/minecraft/server/Block/bw *
+!field net/minecraft/server/Block/a *
+!field net/minecraft/server/Block/m *
+
+.field_map net/minecraft/server/Block/bj textureId
+.field_map net/minecraft/server/Block/bk id
+.field_map net/minecraft/server/Block/bl strength
+.field_map net/minecraft/server/Block/bm durability
+.field_map net/minecraft/server/Block/bn minX
+.field_map net/minecraft/server/Block/bo minY
+.field_map net/minecraft/server/Block/bp minZ
+.field_map net/minecraft/server/Block/bq maxX
+.field_map net/minecraft/server/Block/br maxY
+.field_map net/minecraft/server/Block/bs maxZ
+.field_map net/minecraft/server/Block/bt stepSound
+.field_map net/minecraft/server/Block/bv material
+.field_map net/minecraft/server/Block/bw frictionFactor
+.field_map net/minecraft/server/Block/a name
+.field_map net/minecraft/server/Block/m byId
+
+# Block data
+
+!field net/minecraft/server/Block/t *
+!field net/minecraft/server/Block/u *
+!field net/minecraft/server/Block/v *
+!field net/minecraft/server/Block/w *
+!field net/minecraft/server/Block/x *
+!field net/minecraft/server/Block/y *
+!field net/minecraft/server/Block/z *
+!field net/minecraft/server/Block/A *
+!field net/minecraft/server/Block/B *
+!field net/minecraft/server/Block/C *
+!field net/minecraft/server/Block/D *
+!field net/minecraft/server/Block/E *
+!field net/minecraft/server/Block/F *
+!field net/minecraft/server/Block/G *
+!field net/minecraft/server/Block/H *
+!field net/minecraft/server/Block/I *
+!field net/minecraft/server/Block/J *
+!field net/minecraft/server/Block/K *
+!field net/minecraft/server/Block/L *
+!field net/minecraft/server/Block/M *
+!field net/minecraft/server/Block/N *
+!field net/minecraft/server/Block/O *
+!field net/minecraft/server/Block/P *
+!field net/minecraft/server/Block/Q *
+!field net/minecraft/server/Block/R *
+!field net/minecraft/server/Block/S *
+!field net/minecraft/server/Block/ab *
+!field net/minecraft/server/Block/ad *
+!field net/minecraft/server/Block/ae *
+!field net/minecraft/server/Block/af *
+!field net/minecraft/server/Block/ag *
+!field net/minecraft/server/Block/ah *
+!field net/minecraft/server/Block/ai *
+!field net/minecraft/server/Block/aj *
+!field net/minecraft/server/Block/ak *
+!field net/minecraft/server/Block/al *
+!field net/minecraft/server/Block/am *
+!field net/minecraft/server/Block/an *
+!field net/minecraft/server/Block/ao *
+!field net/minecraft/server/Block/ap *
+!field net/minecraft/server/Block/aq *
+!field net/minecraft/server/Block/ar *
+!field net/minecraft/server/Block/as *
+!field net/minecraft/server/Block/at *
+!field net/minecraft/server/Block/au *
+!field net/minecraft/server/Block/av *
+!field net/minecraft/server/Block/aw *
+!field net/minecraft/server/Block/ax *
+!field net/minecraft/server/Block/ay *
+!field net/minecraft/server/Block/az *
+!field net/minecraft/server/Block/aA *
+!field net/minecraft/server/Block/aB *
+!field net/minecraft/server/Block/aC *
+!field net/minecraft/server/Block/aD *
+!field net/minecraft/server/Block/aE *
+!field net/minecraft/server/Block/aF *
+!field net/minecraft/server/Block/aG *
+!field net/minecraft/server/Block/aH *
+!field net/minecraft/server/Block/aI *
+!field net/minecraft/server/Block/aJ *
+!field net/minecraft/server/Block/aK *
+!field net/minecraft/server/Block/aL *
+!field net/minecraft/server/Block/aM *
+!field net/minecraft/server/Block/aN *
+!field net/minecraft/server/Block/aO *
+!field net/minecraft/server/Block/aP *
+!field net/minecraft/server/Block/aQ *
+!field net/minecraft/server/Block/aR *
+!field net/minecraft/server/Block/aS *
+!field net/minecraft/server/Block/aT *
+!field net/minecraft/server/Block/aU *
+!field net/minecraft/server/Block/aV *
+!field net/minecraft/server/Block/aW *
+!field net/minecraft/server/Block/aX *
+!field net/minecraft/server/Block/aY *
+!field net/minecraft/server/Block/aZ *
+!field net/minecraft/server/Block/ba *
+!field net/minecraft/server/Block/bb *
+!field net/minecraft/server/Block/bc *
+!field net/minecraft/server/Block/bd *
+!field net/minecraft/server/Block/be *
+!field net/minecraft/server/Block/bf *
+!field net/minecraft/server/Block/bg *
+!field net/minecraft/server/Block/bh *
+!field net/minecraft/server/Block/bi *
+
+.field_map net/minecraft/server/Block/t STONE
+.field_map net/minecraft/server/Block/u GRASS
+.field_map net/minecraft/server/Block/v DIRT
+.field_map net/minecraft/server/Block/w COBBLESTONE
+.field_map net/minecraft/server/Block/x WOOD
+.field_map net/minecraft/server/Block/y SAPLING
+.field_map net/minecraft/server/Block/z BEDROCK
+.field_map net/minecraft/server/Block/A WATER
+.field_map net/minecraft/server/Block/B STATIONARY_WATER
+.field_map net/minecraft/server/Block/C LAVA
+.field_map net/minecraft/server/Block/D STATIONARY_LAVA
+.field_map net/minecraft/server/Block/E SAND
+.field_map net/minecraft/server/Block/F GRAVEL
+.field_map net/minecraft/server/Block/G GOLD_ORE
+.field_map net/minecraft/server/Block/H IRON_ORE
+.field_map net/minecraft/server/Block/I COAL_ORE
+.field_map net/minecraft/server/Block/J LOG
+.field_map net/minecraft/server/Block/K LEAVES
+.field_map net/minecraft/server/Block/L SPONGE
+.field_map net/minecraft/server/Block/M GLASS
+.field_map net/minecraft/server/Block/N LAPIS_ORE
+.field_map net/minecraft/server/Block/O LAPIS_BLOCK
+.field_map net/minecraft/server/Block/P DISPENSER
+.field_map net/minecraft/server/Block/Q SANDSTONE
+.field_map net/minecraft/server/Block/R NOTE_BLOCK
+.field_map net/minecraft/server/Block/S BED
+.field_map net/minecraft/server/Block/ab WOOL
+.field_map net/minecraft/server/Block/ad YELLOW_FLOWER
+.field_map net/minecraft/server/Block/ae RED_ROSE
+.field_map net/minecraft/server/Block/af BROWN_MUSHROOM
+.field_map net/minecraft/server/Block/ag RED_MUSHROOM
+.field_map net/minecraft/server/Block/ah GOLD_BLOCK
+.field_map net/minecraft/server/Block/ai IRON_BLOCK
+.field_map net/minecraft/server/Block/aj DOUBLE_STEP
+.field_map net/minecraft/server/Block/ak STEP
+.field_map net/minecraft/server/Block/al BRICK
+.field_map net/minecraft/server/Block/am TNT
+.field_map net/minecraft/server/Block/an BOOKSHELF
+.field_map net/minecraft/server/Block/ao MOSSY_COBBLESTONE
+.field_map net/minecraft/server/Block/ap OBSIDIAN
+.field_map net/minecraft/server/Block/aq TORCH
+.field_map net/minecraft/server/Block/ar FIRE
+.field_map net/minecraft/server/Block/as MOB_SPAWNER
+.field_map net/minecraft/server/Block/at WOOD_STAIRS
+.field_map net/minecraft/server/Block/au CHEST
+.field_map net/minecraft/server/Block/av REDSTONE_WIRE
+.field_map net/minecraft/server/Block/aw DIAMOND_ORE
+.field_map net/minecraft/server/Block/ax DIAMOND_BLOCK
+.field_map net/minecraft/server/Block/ay WORKBENCH
+.field_map net/minecraft/server/Block/az CROPS
+.field_map net/minecraft/server/Block/aA SOIL
+.field_map net/minecraft/server/Block/aB FURNACE
+.field_map net/minecraft/server/Block/aC BURNING_FURNACE
+.field_map net/minecraft/server/Block/aD SIGN_POST
+.field_map net/minecraft/server/Block/aE WOODEN_DOOR
+.field_map net/minecraft/server/Block/aF LADDER
+.field_map net/minecraft/server/Block/aG RAILS
+.field_map net/minecraft/server/Block/aH COBBLESTONE_STAIRS
+.field_map net/minecraft/server/Block/aI WALL_SIGN
+.field_map net/minecraft/server/Block/aJ LEVER
+.field_map net/minecraft/server/Block/aK STONE_PLATE
+.field_map net/minecraft/server/Block/aL IRON_DOOR_BLOCK
+.field_map net/minecraft/server/Block/aM WOOD_PLATE
+.field_map net/minecraft/server/Block/aN REDSTONE_ORE
+.field_map net/minecraft/server/Block/aO GLOWING_REDSTONE_ORE
+.field_map net/minecraft/server/Block/aP REDSTONE_TORCH_OFF
+.field_map net/minecraft/server/Block/aQ REDSTONE_TORCH_ON
+.field_map net/minecraft/server/Block/aR STONE_BUTTON
+.field_map net/minecraft/server/Block/aS SNOW
+.field_map net/minecraft/server/Block/aT ICE
+.field_map net/minecraft/server/Block/aU SNOW_BLOCK
+.field_map net/minecraft/server/Block/aV CACTUS
+.field_map net/minecraft/server/Block/aW CLAY
+.field_map net/minecraft/server/Block/aX SUGAR_CANE_BLOCK
+.field_map net/minecraft/server/Block/aY JUKEBOX
+.field_map net/minecraft/server/Block/aZ FENCE
+.field_map net/minecraft/server/Block/ba PUMPKIN
+.field_map net/minecraft/server/Block/bb NETHERRACK
+.field_map net/minecraft/server/Block/bc SOUL_SAND
+.field_map net/minecraft/server/Block/bd GLOWSTONE
+.field_map net/minecraft/server/Block/be PORTAL
+.field_map net/minecraft/server/Block/bf JACK_O_LANTERN
+.field_map net/minecraft/server/Block/bg CAKE_BLOCK
+.field_map net/minecraft/server/Block/bh DIODE_OFF
+.field_map net/minecraft/server/Block/bi DIODE_ON
+
+# Items
+
+!field net/minecraft/server/Item/c *
+!field net/minecraft/server/Item/bc *
+!field net/minecraft/server/Item/bd *
+!field net/minecraft/server/Item/be *
+!field net/minecraft/server/Item/bf *
+!field net/minecraft/server/Item/a *
+!field net/minecraft/server/Item/bi *
+
+.field_map net/minecraft/server/Item/c byId
+.field_map net/minecraft/server/Item/bc id
+.field_map net/minecraft/server/Item/bd maxStackSize
+.field_map net/minecraft/server/Item/be durability
+.field_map net/minecraft/server/Item/bf textureId
+.field_map net/minecraft/server/Item/a craftingResult
+.field_map net/minecraft/server/Item/bi name
+
+# Item data
+
+!field net/minecraft/server/Item/d *
+!field net/minecraft/server/Item/e *
+!field net/minecraft/server/Item/f *
+!field net/minecraft/server/Item/g *
+!field net/minecraft/server/Item/h *
+!field net/minecraft/server/Item/i *
+!field net/minecraft/server/Item/j *
+!field net/minecraft/server/Item/k *
+!field net/minecraft/server/Item/l *
+!field net/minecraft/server/Item/m *
+!field net/minecraft/server/Item/n *
+!field net/minecraft/server/Item/o *
+!field net/minecraft/server/Item/p *
+!field net/minecraft/server/Item/q *
+!field net/minecraft/server/Item/r *
+!field net/minecraft/server/Item/s *
+!field net/minecraft/server/Item/t *
+!field net/minecraft/server/Item/u *
+!field net/minecraft/server/Item/v *
+!field net/minecraft/server/Item/w *
+!field net/minecraft/server/Item/x *
+!field net/minecraft/server/Item/y *
+!field net/minecraft/server/Item/z *
+!field net/minecraft/server/Item/A *
+!field net/minecraft/server/Item/B *
+!field net/minecraft/server/Item/C *
+!field net/minecraft/server/Item/D *
+!field net/minecraft/server/Item/E *
+!field net/minecraft/server/Item/F *
+!field net/minecraft/server/Item/G *
+!field net/minecraft/server/Item/H *
+!field net/minecraft/server/Item/I *
+!field net/minecraft/server/Item/J *
+!field net/minecraft/server/Item/K *
+!field net/minecraft/server/Item/L *
+!field net/minecraft/server/Item/M *
+!field net/minecraft/server/Item/N *
+!field net/minecraft/server/Item/O *
+!field net/minecraft/server/Item/P *
+!field net/minecraft/server/Item/Q *
+!field net/minecraft/server/Item/R *
+!field net/minecraft/server/Item/S *
+!field net/minecraft/server/Item/T *
+!field net/minecraft/server/Item/U *
+!field net/minecraft/server/Item/V *
+!field net/minecraft/server/Item/W *
+!field net/minecraft/server/Item/X *
+!field net/minecraft/server/Item/Y *
+!field net/minecraft/server/Item/Z *
+!field net/minecraft/server/Item/aa *
+!field net/minecraft/server/Item/ab *
+!field net/minecraft/server/Item/ac *
+!field net/minecraft/server/Item/ad *
+!field net/minecraft/server/Item/ae *
+!field net/minecraft/server/Item/af *
+!field net/minecraft/server/Item/ag *
+!field net/minecraft/server/Item/ah *
+!field net/minecraft/server/Item/ai *
+!field net/minecraft/server/Item/aj *
+!field net/minecraft/server/Item/ak *
+!field net/minecraft/server/Item/al *
+!field net/minecraft/server/Item/am *
+!field net/minecraft/server/Item/an *
+!field net/minecraft/server/Item/ao *
+!field net/minecraft/server/Item/ap *
+!field net/minecraft/server/Item/aq *
+!field net/minecraft/server/Item/ar *
+!field net/minecraft/server/Item/as *
+!field net/minecraft/server/Item/at *
+!field net/minecraft/server/Item/au *
+!field net/minecraft/server/Item/av *
+!field net/minecraft/server/Item/aw *
+!field net/minecraft/server/Item/ax *
+!field net/minecraft/server/Item/ay *
+!field net/minecraft/server/Item/az *
+!field net/minecraft/server/Item/aA *
+!field net/minecraft/server/Item/aB *
+!field net/minecraft/server/Item/aC *
+!field net/minecraft/server/Item/aD *
+!field net/minecraft/server/Item/aE *
+!field net/minecraft/server/Item/aF *
+!field net/minecraft/server/Item/aG *
+!field net/minecraft/server/Item/aH *
+!field net/minecraft/server/Item/aI *
+!field net/minecraft/server/Item/aJ *
+!field net/minecraft/server/Item/aK *
+!field net/minecraft/server/Item/aL *
+!field net/minecraft/server/Item/aM *
+!field net/minecraft/server/Item/aN *
+!field net/minecraft/server/Item/aO *
+!field net/minecraft/server/Item/aP *
+!field net/minecraft/server/Item/aQ *
+!field net/minecraft/server/Item/aR *
+!field net/minecraft/server/Item/aS *
+!field net/minecraft/server/Item/aT *
+!field net/minecraft/server/Item/aU *
+!field net/minecraft/server/Item/aV *
+!field net/minecraft/server/Item/aW *
+!field net/minecraft/server/Item/aX *
+!field net/minecraft/server/Item/aY *
+!field net/minecraft/server/Item/aZ *
+!field net/minecraft/server/Item/ba *
+!field net/minecraft/server/Item/bb *
+
+.field_map net/minecraft/server/Item/d IRON_SPADE
+.field_map net/minecraft/server/Item/e IRON_PICKAXE
+.field_map net/minecraft/server/Item/f IRON_AXE
+.field_map net/minecraft/server/Item/g FLINT_AND_STEEL
+.field_map net/minecraft/server/Item/h APPLE
+.field_map net/minecraft/server/Item/i BOW
+.field_map net/minecraft/server/Item/j ARROW
+.field_map net/minecraft/server/Item/k COAL
+.field_map net/minecraft/server/Item/l DIAMOND
+.field_map net/minecraft/server/Item/m IRON_INGOT
+.field_map net/minecraft/server/Item/n GOLD_INGOT
+.field_map net/minecraft/server/Item/o IRON_SWORD
+.field_map net/minecraft/server/Item/p WOOD_SWORD
+.field_map net/minecraft/server/Item/q WOOD_SPADE
+.field_map net/minecraft/server/Item/r WOOD_PICKAXE
+.field_map net/minecraft/server/Item/s WOOD_AXE
+.field_map net/minecraft/server/Item/t STONE_SWORD
+.field_map net/minecraft/server/Item/u STONE_SPADE
+.field_map net/minecraft/server/Item/v STONE_PICKAXE
+.field_map net/minecraft/server/Item/w STONE_AXE
+.field_map net/minecraft/server/Item/x DIAMOND_SWORD
+.field_map net/minecraft/server/Item/y DIAMOND_SPADE
+.field_map net/minecraft/server/Item/z DIAMOND_PICKAXE
+.field_map net/minecraft/server/Item/A DIAMOND_AXE
+.field_map net/minecraft/server/Item/B STICK
+.field_map net/minecraft/server/Item/C BOWL
+.field_map net/minecraft/server/Item/D MUSHROOM_SOUP
+.field_map net/minecraft/server/Item/E GOLD_SWORD
+.field_map net/minecraft/server/Item/F GOLD_SPADE
+.field_map net/minecraft/server/Item/G GOLD_PICKAXE
+.field_map net/minecraft/server/Item/H GOLD_AXE
+.field_map net/minecraft/server/Item/I STRING
+.field_map net/minecraft/server/Item/J FEATHER
+.field_map net/minecraft/server/Item/K SULPHUR
+.field_map net/minecraft/server/Item/L WOOD_HOE
+.field_map net/minecraft/server/Item/M STONE_HOE
+.field_map net/minecraft/server/Item/N IRON_HOE
+.field_map net/minecraft/server/Item/O DIAMOND_HOE
+.field_map net/minecraft/server/Item/P GOLD_HOE
+.field_map net/minecraft/server/Item/Q SEEDS
+.field_map net/minecraft/server/Item/R WHEAT
+.field_map net/minecraft/server/Item/S BREAD
+.field_map net/minecraft/server/Item/T LEATHER_HELMET
+.field_map net/minecraft/server/Item/U LEATHER_CHESTPLATE
+.field_map net/minecraft/server/Item/V LEATHER_LEGGINGS
+.field_map net/minecraft/server/Item/W LEATHER_BOOTS
+.field_map net/minecraft/server/Item/X CHAINMAIL_HELMET
+.field_map net/minecraft/server/Item/Y CHAINMAIL_CHESTPLATE
+.field_map net/minecraft/server/Item/Z CHAINMAIL_LEGGINGS
+.field_map net/minecraft/server/Item/aa CHAINMAIL_BOOTS
+.field_map net/minecraft/server/Item/ab IRON_HELMET
+.field_map net/minecraft/server/Item/ac IRON_CHESTPLATE
+.field_map net/minecraft/server/Item/ad IRON_LEGGINGS
+.field_map net/minecraft/server/Item/ae IRON_BOOTS
+.field_map net/minecraft/server/Item/af DIAMOND_HELMET
+.field_map net/minecraft/server/Item/ag DIAMOND_CHESTPLATE
+.field_map net/minecraft/server/Item/ah DIAMOND_LEGGINGS
+.field_map net/minecraft/server/Item/ai DIAMOND_BOOTS
+.field_map net/minecraft/server/Item/aj GOLD_HELMET
+.field_map net/minecraft/server/Item/ak GOLD_CHESTPLATE
+.field_map net/minecraft/server/Item/al GOLD_LEGGINGS
+.field_map net/minecraft/server/Item/am GOLD_BOOTS
+.field_map net/minecraft/server/Item/an FLINT
+.field_map net/minecraft/server/Item/ao PORK
+.field_map net/minecraft/server/Item/ap GRILLED_PORK
+.field_map net/minecraft/server/Item/aq PAINTING
+.field_map net/minecraft/server/Item/ar GOLDEN_APPLE
+.field_map net/minecraft/server/Item/as SIGN
+.field_map net/minecraft/server/Item/at WOOD_DOOR
+.field_map net/minecraft/server/Item/au BUCKET
+.field_map net/minecraft/server/Item/av WATER_BUCKET
+.field_map net/minecraft/server/Item/aw LAVA_BUCKET
+.field_map net/minecraft/server/Item/ax MINECART
+.field_map net/minecraft/server/Item/ay SADDLE
+.field_map net/minecraft/server/Item/az IRON_DOOR
+.field_map net/minecraft/server/Item/aA REDSTONE
+.field_map net/minecraft/server/Item/aB SNOW_BALL
+.field_map net/minecraft/server/Item/aC BOAT
+.field_map net/minecraft/server/Item/aD LEATHER
+.field_map net/minecraft/server/Item/aE MILK_BUCKET
+.field_map net/minecraft/server/Item/aF CLAY_BRICK
+.field_map net/minecraft/server/Item/aG CLAY_BALL
+.field_map net/minecraft/server/Item/aH SUGAR_CANE
+.field_map net/minecraft/server/Item/aI PAPER
+.field_map net/minecraft/server/Item/aJ BOOK
+.field_map net/minecraft/server/Item/aK SLIME_BALL
+.field_map net/minecraft/server/Item/aL STORAGE_MINECART
+.field_map net/minecraft/server/Item/aM POWERED_MINECART
+.field_map net/minecraft/server/Item/aN EGG
+.field_map net/minecraft/server/Item/aO COMPASS
+.field_map net/minecraft/server/Item/aP FISHING_ROD
+.field_map net/minecraft/server/Item/aQ WATCH
+.field_map net/minecraft/server/Item/aR GLOWSTONE_DUST
+.field_map net/minecraft/server/Item/aS RAW_FISH
+.field_map net/minecraft/server/Item/aT COOKED_FISH
+.field_map net/minecraft/server/Item/aU INK_SACK
+.field_map net/minecraft/server/Item/aV BONE
+.field_map net/minecraft/server/Item/aW SUGAR
+.field_map net/minecraft/server/Item/aX CAKE
+.field_map net/minecraft/server/Item/aY BED
+.field_map net/minecraft/server/Item/aZ DIODE
+.field_map net/minecraft/server/Item/ba GOLD_RECORD
+.field_map net/minecraft/server/Item/bb GREEN_RECORD
+
+# Biomes
+
+!field net/minecraft/server/BiomeBase/a *
+!field net/minecraft/server/BiomeBase/b *
+!field net/minecraft/server/BiomeBase/c *
+!field net/minecraft/server/BiomeBase/d *
+!field net/minecraft/server/BiomeBase/e *
+!field net/minecraft/server/BiomeBase/f *
+!field net/minecraft/server/BiomeBase/g *
+!field net/minecraft/server/BiomeBase/h *
+!field net/minecraft/server/BiomeBase/i *
+!field net/minecraft/server/BiomeBase/j *
+!field net/minecraft/server/BiomeBase/k *
+!field net/minecraft/server/BiomeBase/l *
+
+.field_map net/minecraft/server/BiomeBase/a RAINFOREST
+.field_map net/minecraft/server/BiomeBase/b SWAMPLAND
+.field_map net/minecraft/server/BiomeBase/c SEASONAL_FOREST
+.field_map net/minecraft/server/BiomeBase/d FOREST
+.field_map net/minecraft/server/BiomeBase/e SAVANNA
+.field_map net/minecraft/server/BiomeBase/f SHRUBLAND
+.field_map net/minecraft/server/BiomeBase/g TAIGA
+.field_map net/minecraft/server/BiomeBase/h DESERT
+.field_map net/minecraft/server/BiomeBase/i PLAINS
+.field_map net/minecraft/server/BiomeBase/j ICE_DESERT
+.field_map net/minecraft/server/BiomeBase/k TUNDRA
+.field_map net/minecraft/server/BiomeBase/l HELL
+
+# EnumToolMaterial
+
+!field net/minecraft/server/EnumToolMaterial/a *
+!field net/minecraft/server/EnumToolMaterial/b *
+!field net/minecraft/server/EnumToolMaterial/c *
+!field net/minecraft/server/EnumToolMaterial/d *
+!field net/minecraft/server/EnumToolMaterial/e *
+
+.field_map net/minecraft/server/EnumToolMaterial/a WOOD
+.field_map net/minecraft/server/EnumToolMaterial/b STONE
+.field_map net/minecraft/server/EnumToolMaterial/c IRON
+.field_map net/minecraft/server/EnumToolMaterial/d DIAMOND
+.field_map net/minecraft/server/EnumToolMaterial/e GOLD
+
+# EnumSkyBlock
+
+!field net/minecraft/server/EnumSkyBlock/a *
+!field net/minecraft/server/EnumSkyBlock/b *
+
+.field_map net/minecraft/server/EnumSkyBlock/a SKY
+.field_map net/minecraft/server/EnumSkyBlock/b BLOCK
+
+# EnumMovingObjectType
+
+!field net/minecraft/server/EnumMovingObjectType/a *
+!field net/minecraft/server/EnumMovingObjectType/b *
+
+.field_map net/minecraft/server/EnumMovingObjectType/a TILE
+.field_map net/minecraft/server/EnumMovingObjectType/b ENTITY
+
+# EnumMobType
+
+!field net/minecraft/server/EnumMobType/a *
+!field net/minecraft/server/EnumMobType/b *
+!field net/minecraft/server/EnumMobType/c *
+
+.field_map net/minecraft/server/EnumMobType/a EVERYTHING
+.field_map net/minecraft/server/EnumMobType/b MOBS
+.field_map net/minecraft/server/EnumMobType/c PLAYERS
+
+# EnumCreatureType
+
+!field net/minecraft/server/EnumCreatureType/a *
+!field net/minecraft/server/EnumCreatureType/b *
+!field net/minecraft/server/EnumCreatureType/c *
+
+.field_map net/minecraft/server/EnumCreatureType/a MONSTER
+.field_map net/minecraft/server/EnumCreatureType/b CREATURE
+.field_map net/minecraft/server/EnumCreatureType/c WATER_CREATURE
+
+# EnumArt
+
+!field net/minecraft/server/EnumArt/a *
+!field net/minecraft/server/EnumArt/b *
+!field net/minecraft/server/EnumArt/c *
+!field net/minecraft/server/EnumArt/d *
+!field net/minecraft/server/EnumArt/e *
+!field net/minecraft/server/EnumArt/f *
+!field net/minecraft/server/EnumArt/g *
+!field net/minecraft/server/EnumArt/h *
+!field net/minecraft/server/EnumArt/i *
+!field net/minecraft/server/EnumArt/j *
+!field net/minecraft/server/EnumArt/k *
+!field net/minecraft/server/EnumArt/l *
+!field net/minecraft/server/EnumArt/m *
+!field net/minecraft/server/EnumArt/n *
+!field net/minecraft/server/EnumArt/o *
+!field net/minecraft/server/EnumArt/p *
+!field net/minecraft/server/EnumArt/q *
+!field net/minecraft/server/EnumArt/r *
+!field net/minecraft/server/EnumArt/s *
+!field net/minecraft/server/EnumArt/t *
+!field net/minecraft/server/EnumArt/u *
+!field net/minecraft/server/EnumArt/v *
+!field net/minecraft/server/EnumArt/w *
+!field net/minecraft/server/EnumArt/x *
+!field net/minecraft/server/EnumArt/y *
+
+.field_map net/minecraft/server/EnumArt/a KEBAB
+.field_map net/minecraft/server/EnumArt/b AZTEC
+.field_map net/minecraft/server/EnumArt/c ALBAN
+.field_map net/minecraft/server/EnumArt/d AZTEC2
+.field_map net/minecraft/server/EnumArt/e BOMB
+.field_map net/minecraft/server/EnumArt/f PLANT
+.field_map net/minecraft/server/EnumArt/g WASTELAND
+.field_map net/minecraft/server/EnumArt/h POOL
+.field_map net/minecraft/server/EnumArt/i COURBET
+.field_map net/minecraft/server/EnumArt/j SEA
+.field_map net/minecraft/server/EnumArt/k SUNSET
+.field_map net/minecraft/server/EnumArt/l CREEBET
+.field_map net/minecraft/server/EnumArt/m WANDERER
+.field_map net/minecraft/server/EnumArt/n GRAHAM
+.field_map net/minecraft/server/EnumArt/o MATCH
+.field_map net/minecraft/server/EnumArt/p BUST
+.field_map net/minecraft/server/EnumArt/q STAGE
+.field_map net/minecraft/server/EnumArt/r VOID
+.field_map net/minecraft/server/EnumArt/s SKULL_AND_ROSES
+.field_map net/minecraft/server/EnumArt/t FIGHTERS
+.field_map net/minecraft/server/EnumArt/u POINTER
+.field_map net/minecraft/server/EnumArt/v PIGSCENE
+.field_map net/minecraft/server/EnumArt/w BURNINGSKULL
+.field_map net/minecraft/server/EnumArt/x SKELETON
+.field_map net/minecraft/server/EnumArt/y DONKEYKONG
+
+# Entity
+
+!field net/minecraft/server/Entity/ba *
+!field net/minecraft/server/Entity/bb *
+!field net/minecraft/server/Entity/bc *
+!field net/minecraft/server/Entity/bd *
+!field net/minecraft/server/Entity/bh *
+!field net/minecraft/server/Entity/bq *
+!field net/minecraft/server/Entity/br *
+!field net/minecraft/server/Entity/bs *
+!field net/minecraft/server/Entity/bt *
+!field net/minecraft/server/Entity/a *
+!field net/minecraft/server/Entity/aA *
+!field net/minecraft/server/Entity/aD *
+!field net/minecraft/server/Entity/aE *
+!field net/minecraft/server/Entity/aF *
+!field net/minecraft/server/Entity/aG *
+!field net/minecraft/server/Entity/aH *
+!field net/minecraft/server/Entity/aI *
+!field net/minecraft/server/Entity/aJ *
+!field net/minecraft/server/Entity/aK *
+!field net/minecraft/server/Entity/aL *
+!field net/minecraft/server/Entity/aM *
+!field net/minecraft/server/Entity/aN *
+!field net/minecraft/server/Entity/aO *
+!field net/minecraft/server/Entity/aP *
+!field net/minecraft/server/Entity/aQ *
+!field net/minecraft/server/Entity/aR *
+!field net/minecraft/server/Entity/aS *
+!field net/minecraft/server/Entity/aT *
+!field net/minecraft/server/Entity/aU *
+!field net/minecraft/server/Entity/bu *
+!field net/minecraft/server/Entity/bw *
+!field net/minecraft/server/Entity/bx *
+!field net/minecraft/server/Entity/bz *
+!field net/minecraft/server/Entity/bB *
+!field net/minecraft/server/Entity/bD *
+!field net/minecraft/server/Entity/c *
+!field net/minecraft/server/Entity/ea *
+
+.field_map net/minecraft/server/Entity/ba dead
+.field_map net/minecraft/server/Entity/bb height
+.field_map net/minecraft/server/Entity/bc length
+.field_map net/minecraft/server/Entity/bd width
+.field_map net/minecraft/server/Entity/bh fallDistance
+.field_map net/minecraft/server/Entity/bq random
+.field_map net/minecraft/server/Entity/br ticksLived
+.field_map net/minecraft/server/Entity/bs maxFireTicks
+.field_map net/minecraft/server/Entity/bt fireTicks
+.field_map net/minecraft/server/Entity/a entityCount
+.field_map net/minecraft/server/Entity/aA id
+.field_map net/minecraft/server/Entity/aD passenger
+.field_map net/minecraft/server/Entity/aE vehicle
+.field_map net/minecraft/server/Entity/aF world
+.field_map net/minecraft/server/Entity/aG lastX
+.field_map net/minecraft/server/Entity/aH lastY
+.field_map net/minecraft/server/Entity/aI lastZ
+.field_map net/minecraft/server/Entity/aJ locX
+.field_map net/minecraft/server/Entity/aK locY
+.field_map net/minecraft/server/Entity/aL locZ
+.field_map net/minecraft/server/Entity/aM motX
+.field_map net/minecraft/server/Entity/aN motY
+.field_map net/minecraft/server/Entity/aO motZ
+.field_map net/minecraft/server/Entity/aP yaw
+.field_map net/minecraft/server/Entity/aQ pitch
+.field_map net/minecraft/server/Entity/aR lastYaw
+.field_map net/minecraft/server/Entity/aS lastPitch
+.field_map net/minecraft/server/Entity/aT boundingBox
+.field_map net/minecraft/server/Entity/aU onGround
+.field_map net/minecraft/server/Entity/bu maxAirTicks
+.field_map net/minecraft/server/Entity/bw noDamageTicks
+.field_map net/minecraft/server/Entity/bx airTicks
+.field_map net/minecraft/server/Entity/bz datawatcher
+.field_map net/minecraft/server/Entity/bB chunkX
+.field_map net/minecraft/server/Entity/bD chunkZ
+.field_map net/minecraft/server/Entity/c justCreated
+.field_map net/minecraft/server/Entity/ea fireImmune
+
+# ItemStack
+
+!field net/minecraft/server/ItemStack/a *
+!field net/minecraft/server/ItemStack/c *
+!field net/minecraft/server/ItemStack/d *
+
+.field_map net/minecraft/server/ItemStack/a count
+.field_map net/minecraft/server/ItemStack/c id
+.field_map net/minecraft/server/ItemStack/d damage
+
+# EntityHuman
+
+!field net/minecraft/server/EntityHuman/a *
+!field net/minecraft/server/EntityHuman/c *
+!field net/minecraft/server/EntityHuman/i *
+!field net/minecraft/server/EntityHuman/j *
+!field net/minecraft/server/EntityHuman/k *
+!field net/minecraft/server/EntityHuman/r *
+!field net/minecraft/server/EntityHuman/s *
+!field net/minecraft/server/EntityHuman/B *
+
+.field_map net/minecraft/server/EntityHuman/a sleeping
+.field_map net/minecraft/server/EntityHuman/c sleepTicks
+.field_map net/minecraft/server/EntityHuman/i inventory
+.field_map net/minecraft/server/EntityHuman/j defaultContainer
+.field_map net/minecraft/server/EntityHuman/k activeContainer
+.field_map net/minecraft/server/EntityHuman/r name
+.field_map net/minecraft/server/EntityHuman/s dimension
+.field_map net/minecraft/server/EntityHuman/B hookedFish
+
+# EntityLiving
+
+!field net/minecraft/server/EntityLiving/C *
+!field net/minecraft/server/EntityLiving/M *
+!field net/minecraft/server/EntityLiving/W *
+!field net/minecraft/server/EntityLiving/Y *
+!field net/minecraft/server/EntityLiving/ab *
+!field net/minecraft/server/EntityLiving/ac *
+!field net/minecraft/server/EntityLiving/as *
+
+.field_map net/minecraft/server/EntityLiving/C maxNoDamageTicks
+.field_map net/minecraft/server/EntityLiving/M texture
+.field_map net/minecraft/server/EntityLiving/W health
+.field_map net/minecraft/server/EntityLiving/Y hurtTicks
+.field_map net/minecraft/server/EntityLiving/ab deathTicks
+.field_map net/minecraft/server/EntityLiving/ac attackTicks
+.field_map net/minecraft/server/EntityLiving/as lastDamage
+
+# Material
+
+!field net/minecraft/server/Material/a *
+!field net/minecraft/server/Material/b *
+!field net/minecraft/server/Material/c *
+!field net/minecraft/server/Material/d *
+!field net/minecraft/server/Material/e *
+!field net/minecraft/server/Material/f *
+!field net/minecraft/server/Material/g *
+!field net/minecraft/server/Material/h *
+!field net/minecraft/server/Material/i *
+!field net/minecraft/server/Material/j *
+!field net/minecraft/server/Material/k *
+!field net/minecraft/server/Material/l *
+!field net/minecraft/server/Material/m *
+!field net/minecraft/server/Material/n *
+!field net/minecraft/server/Material/o *
+!field net/minecraft/server/Material/p *
+!field net/minecraft/server/Material/q *
+!field net/minecraft/server/Material/r *
+!field net/minecraft/server/Material/s *
+!field net/minecraft/server/Material/t *
+!field net/minecraft/server/Material/u *
+!field net/minecraft/server/Material/v *
+!field net/minecraft/server/Material/w *
+!field net/minecraft/server/Material/x *
+!field net/minecraft/server/Material/y *
+!field net/minecraft/server/Material/z *
+
+.field_map net/minecraft/server/Material/a AIR
+.field_map net/minecraft/server/Material/b EARTH
+.field_map net/minecraft/server/Material/c WOOD
+.field_map net/minecraft/server/Material/d STONE
+.field_map net/minecraft/server/Material/e ORE
+.field_map net/minecraft/server/Material/f WATER
+.field_map net/minecraft/server/Material/g LAVA
+.field_map net/minecraft/server/Material/h LEAVES
+.field_map net/minecraft/server/Material/i PLANT
+.field_map net/minecraft/server/Material/j SPONGE
+.field_map net/minecraft/server/Material/k CLOTH
+.field_map net/minecraft/server/Material/l FIRE
+.field_map net/minecraft/server/Material/m SAND
+.field_map net/minecraft/server/Material/n ORIENTABLE
+.field_map net/minecraft/server/Material/o SHATTERABLE
+.field_map net/minecraft/server/Material/p TNT
+.field_map net/minecraft/server/Material/q CORAL
+.field_map net/minecraft/server/Material/r ICE
+.field_map net/minecraft/server/Material/s SNOW_LAYER
+.field_map net/minecraft/server/Material/t SNOW_BLOCK
+.field_map net/minecraft/server/Material/u CACTUS
+.field_map net/minecraft/server/Material/v CLAY
+.field_map net/minecraft/server/Material/w PUMPKIN
+.field_map net/minecraft/server/Material/x PORTAL
+.field_map net/minecraft/server/Material/y CAKE
+.field_map net/minecraft/server/Material/z canBurn
+
+# Material + overloads
+
+!method net/minecraft/server/Material/a ()Z
+!method net/minecraft/server/Material/b ()Z
+!method net/minecraft/server/Material/c ()Z
+!method net/minecraft/server/Material/d ()Z
+!method net/minecraft/server/Material/e ()Z
+!method net/minecraft/server/MaterialLiquid/a ()Z
+!method net/minecraft/server/MaterialLiquid/c ()Z
+!method net/minecraft/server/MaterialLiquid/d ()Z
+!method net/minecraft/server/MaterialLogic/a ()Z
+!method net/minecraft/server/MaterialLogic/b ()Z
+!method net/minecraft/server/MaterialLogic/c ()Z
+!method net/minecraft/server/MaterialTransparent/a ()Z
+!method net/minecraft/server/MaterialTransparent/b ()Z
+!method net/minecraft/server/MaterialTransparent/c ()Z
+
+.method_map net/minecraft/server/Material/a ()Z isBuildable
+.method_map net/minecraft/server/Material/b ()Z blocksLight
+.method_map net/minecraft/server/Material/c ()Z isSolid
+.method_map net/minecraft/server/Material/d ()Z isLiquid
+.method_map net/minecraft/server/Material/e ()Z isBurnable
+.method_map net/minecraft/server/MaterialLiquid/a ()Z isBuildable
+.method_map net/minecraft/server/MaterialLiquid/c ()Z isSolid
+.method_map net/minecraft/server/MaterialLiquid/d ()Z isLiquid
+.method_map net/minecraft/server/MaterialLogic/a ()Z isBuildable
+.method_map net/minecraft/server/MaterialLogic/b ()Z blocksLight
+.method_map net/minecraft/server/MaterialLogic/c ()Z isSolid
+.method_map net/minecraft/server/MaterialTransparent/a ()Z isBuildable
+.method_map net/minecraft/server/MaterialTransparent/b ()Z blocksLight
+.method_map net/minecraft/server/MaterialTransparent/c ()Z isSolid
+
+# World
+
+!field net/minecraft/server/World/t *
+
+.field_map net/minecraft/server/World/t isStatic
+
+!method net/minecraft/server/World/a (IIIII)Z
+!method net/minecraft/server/World/b (IIII)Z
+!method net/minecraft/server/World/e (III)Z
+!method net/minecraft/server/World/m (III)Lnet/minecraft/server/TileEntity;
+!method net/minecraft/server/World/a (IIILnet/minecraft/server/TileEntity;)V
+
+.method_map net/minecraft/server/World/a (IIIII)Z setTypeIdAndData
+.method_map net/minecraft/server/World/b (IIII)Z setTypeId
+.method_map net/minecraft/server/World/e (III)Z isEmpty
+.method_map net/minecraft/server/World/m (III)Lnet/minecraft/server/TileEntity; getTileEntity
+.method_map net/minecraft/server/World/a (IIILnet/minecraft/server/TileEntity;)V setTileEntity
+
+# IBlockAccess implementation
+
+!method net/minecraft/server/IBlockAccess/a (III)I
+!method net/minecraft/server/IBlockAccess/b (III)I
+!method net/minecraft/server/IBlockAccess/c (III)Lnet/minecraft/server/Material;
+!method net/minecraft/server/ChunkCache/a (III)I
+!method net/minecraft/server/ChunkCache/b (III)I
+!method net/minecraft/server/ChunkCache/c (III)Lnet/minecraft/server/Material;
+!method net/minecraft/server/World/a (III)I
+!method net/minecraft/server/World/b (III)I
+!method net/minecraft/server/World/c (III)Lnet/minecraft/server/Material;
+!method net/minecraft/server/WorldServer/a (III)I
+!method net/minecraft/server/WorldServer/b (III)I
+
+.method_map net/minecraft/server/IBlockAccess/a (III)I getTypeId
+.method_map net/minecraft/server/IBlockAccess/b (III)I getData
+.method_map net/minecraft/server/IBlockAccess/c (III)Lnet/minecraft/server/Material; getMaterial
+.method_map net/minecraft/server/ChunkCache/a (III)I getTypeId
+.method_map net/minecraft/server/ChunkCache/b (III)I getData
+.method_map net/minecraft/server/ChunkCache/c (III)Lnet/minecraft/server/Material; getMaterial
+.method_map net/minecraft/server/World/a (III)I getTypeId
+.method_map net/minecraft/server/World/b (III)I getData
+.method_map net/minecraft/server/World/c (III)Lnet/minecraft/server/Material; getMaterial
+.method_map net/minecraft/server/WorldServer/b (III)I getData
+.method_map net/minecraft/server/WorldServer/c (III)Lnet/minecraft/server/Material; getMaterial
+
+# Comparable fixes
+!method net/minecraft/server/ChunkCoordinates/a (Lnet/minecraft/server/ChunkCoordinates;)I
+.method_map net/minecraft/server/ChunkCoordinates/a (Lnet/minecraft/server/ChunkCoordinates;)I compareTo
+!method net/minecraft/server/NextTickListEntry/a (Lnet/minecraft/server/NextTickListEntry;)I
+.method_map net/minecraft/server/NextTickListEntry/a (Lnet/minecraft/server/NextTickListEntry;)I compareTo
+!method net/minecraft/server/ChunkFile/a (Lnet/minecraft/server/ChunkFile;)I
+.method_map net/minecraft/server/ChunkFile/a (Lnet/minecraft/server/ChunkFile;)I compareTo

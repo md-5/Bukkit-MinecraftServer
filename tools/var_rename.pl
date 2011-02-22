@@ -54,7 +54,8 @@ sub getName {
         $self->{last}{ $type } = [0, $skip, $name];
         $index = $type;
     }
-    die "No data for type: $type\n" unless $index;
+
+    print "No data for type: $type\n" and return $type unless $index;
 
     my ($id, $skip_zero, @data) = @{$self->{last}{ $index }};
     $self->{last}{$index}[0]++;

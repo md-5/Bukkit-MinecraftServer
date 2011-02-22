@@ -24,7 +24,10 @@ $BASEDIR/server/minecraft_server.0.2.7.jar \
 $BASEDIR/server/minecraft_server.0.2.8.jar \
 $BASEDIR/server/minecraft_server.1.1_02.jar \
 $BASEDIR/server/minecraft_server.1.2.jar \
-$BASEDIR/server/minecraft_server.1.2_01.jar ;\
+$BASEDIR/server/minecraft_server.1.2_01.jar \
+$BASEDIR/server/minecraft_server.1.3.jar \
+$BASEDIR/server/minecraft_server.1.3_00.jar \
+; \
 
 do \
     V=`echo $server | sed -e 's/^[^0-9]*//' -e 's/[.][^.]*$//'`; \
